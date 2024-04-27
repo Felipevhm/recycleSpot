@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "andre",
+      "email": "a@e.com",
+      "password": 1
+    },
+    {
+      "id": "2",
+      "name": "bernardo",
+      "email": "renata@e.com",
+      "password": 1
+    },
+    {
+      "name": "clara",
+      "email": "c@e.com",
+      "password": "1",
+      "id": "3"
+    },
+    {
+      "name": "denis",
+      "email": "d@e.com",
+      "password": "1",
+      "id": "4"
+    },
+    {
+      "name": "evaldo",
+      "email": "e@e.com",
+      "password": "1",
+      "id": "5"
+    }
+  ],
+  "recyclingSpots": []
+}
