@@ -2,20 +2,14 @@
   "users": [
     {
       "id": "1",
-      "name": "andre",
+      "name": "Jorge",
       "email": "a@e.com",
       "password": 1
     },
     {
-      "id": "2",
-      "name": "bernardo",
-      "email": "renata@e.com",
-      "password": 1
-    },
-    {
       "name": "clara",
-      "email": "c@e.com",
-      "password": "1",
+      "email": "nova@a.com",
+      "password": "2",
       "id": "3"
     },
     {
@@ -29,6 +23,18 @@
       "email": "e@e.com",
       "password": "1",
       "id": "5"
+    },
+    {
+      "id": "0b5a",
+      "name": "Maria",
+      "email": "m@e.com",
+      "password": "mm"
+    },
+    {
+      "id": "8ab7",
+      "name": "Januario",
+      "email": "j@j.com",
+      "password": "a"
     }
   ],
   "recyclingSpots": []
