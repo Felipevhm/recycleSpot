@@ -1,12 +1,12 @@
+import RegisterUser from "./component/RegisterUser";
 
 function App() {
-
-
+  
   return (
     <>
-    <h1>Maravilha</h1>
-    </>
-  )
+    <RegisterUser/>
+        </>
+  );
 }
 
-export default App
+export default App;
