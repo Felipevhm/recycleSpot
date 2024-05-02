@@ -9,6 +9,7 @@ function RegisterUser() {
     newUser,
     blankUser,
     nameExists,
+    logInUser,
     setNewUser,
     registerUser,
     updateUser,
@@ -18,6 +19,7 @@ function RegisterUser() {
   } = useContext(UsersContext);
 
   const [viewRegister, setViewRegister] = useState(false);
+  const [viewLogIn, setViewLogIn] = useState(false);
 
   const handleClick = (state, setFcn) => {
     return () => setFcn(!state);
@@ -26,11 +28,56 @@ function RegisterUser() {
   return (
     <div className={styles.main}>
       <button
-        className={viewRegister ? styles.omitted : ""}
+        className={viewRegister || viewLogIn ? styles.omitted : ""}
         onClick={handleClick(viewRegister, setViewRegister)}
       >
         Register User
       </button>
+
+      <button
+        className={viewRegister || viewLogIn ? styles.omitted : ""}
+        onClick={handleClick(viewLogIn, setViewLogIn)}
+      >
+        Log in
+      </button>
+
+      <div
+        className={`${styles.registerBox} ${
+          !viewLogIn ? styles.omitted : ""
+        }`}
+      >
+        <h1>Log in</h1>
+
+        <input
+          type="text"
+          value={newUser.name}
+          placeholder="Enter user name"
+          onChange={(event) =>
+            setNewUser({ ...newUser, name: event.target.value })
+          }
+        />
+        <input
+          type="password"
+          value={newUser.password}
+          placeholder="Enter user password"
+          onChange={(event) =>
+            setNewUser({ ...newUser, password: event.target.value })
+          }
+        />
+        <button
+          onClick={() => {
+            logInUser(newUser.name,newUser.password);
+            setNewUser(blankUser);
+          }}
+        >
+          Log in
+        </button>
+        <button onClick={handleClick(viewLogIn, setViewLogIn)}>
+          Go back
+        </button>
+      </div>
+
+{/* -----------------------now the register----------------------------------------- */}
       <div
         className={`${styles.registerBox} ${
           !viewRegister ? styles.omitted : ""
@@ -93,6 +140,8 @@ function RegisterUser() {
         </button>
       </div>
     </div>
+
+
   );
 }
 
