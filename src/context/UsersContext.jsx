@@ -71,6 +71,31 @@ export const UsersContextProvider = ({ children }) => {
     }
   }
 
+  function logInUser(name,password) {
+
+    const foundUser = nameExists(users,name)
+    // console.log("foundUser IS:")
+    // console.log(foundUser)
+
+    if(foundUser.result){
+         alert("Log in: User identified.")
+         if(foundUser.foundUser.password === password){
+          alert("Correct password!");
+          registerLogin("Login OK",foundUser.foundUser.id)
+         }
+         else{
+          alert("Incorrect Password!");
+          
+         }
+        }
+    else{
+      alert("Log in: User not registered, please try again after registration.")
+    }    
+   }
+
+   function registerLogin(status,id){
+    alert("status: " + status + " id: " + id) 
+   }
   function deleteUser(id) {
     fetch("http://localhost:3000/users/" + id, {
       method: "DELETE",
@@ -107,6 +132,7 @@ export const UsersContextProvider = ({ children }) => {
           newUser,
           blankUser,
           nameExists,
+          logInUser,
           setNewUser,
           registerUser,
           deleteUser,
