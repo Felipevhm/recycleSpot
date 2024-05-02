@@ -10,10 +10,16 @@ export const UsersContextProvider = ({ children }) => {
   };
   const [users, setUsers] = useState([]);
   const [newUser, setNewUser] = useState(blankUser);
+  const [loginStatus, setLoginStatus] = useState({status:false,userId:""});
+
 
   useEffect(() => {
     getusers();
   }, []);
+
+  useEffect(() => {
+    console.log(loginStatus)
+  }, [loginStatus]);
 
   function nameExists(arrayOfObjects, name) {
    const foundUser = arrayOfObjects.find((user) => user.name === name);
@@ -33,9 +39,6 @@ export const UsersContextProvider = ({ children }) => {
   }
 
   function getuserById(id) {
-    console.log("id IS: ");
-    console.log(id);
-
     fetch("http://localhost:3000/users/" + id)
       .then((response) => response.json())
       .then((data) => {
@@ -74,14 +77,12 @@ export const UsersContextProvider = ({ children }) => {
   function logInUser(name,password) {
 
     const foundUser = nameExists(users,name)
-    // console.log("foundUser IS:")
-    // console.log(foundUser)
 
     if(foundUser.result){
          alert("Log in: User identified.")
          if(foundUser.foundUser.password === password){
           alert("Correct password!");
-          registerLogin("Login OK",foundUser.foundUser.id)
+          setLoginStatus({status:true,userId:foundUser.foundUser.id})
          }
          else{
           alert("Incorrect Password!");
@@ -93,9 +94,6 @@ export const UsersContextProvider = ({ children }) => {
     }    
    }
 
-   function registerLogin(status,id){
-    alert("status: " + status + " id: " + id) 
-   }
   function deleteUser(id) {
     fetch("http://localhost:3000/users/" + id, {
       method: "DELETE",
