@@ -1,0 +1,28 @@
+.header-class {
+  font-family: "Open Sans", sans-serif;
+
+  height: 70px;
+
+  padding: 10px 40px;
+  align-items: center;
+  justify-content: space-between;
+
+  display: flex;
+  flex: 1;
+
+  background-color: #0b0c0c;
+}
+.links {
+  box-sizing: inherit;
+  display: flex;
+  gap: 20px;
+}
+a {
+  text-decoration: none;
+
+  color: rgb(255, 240, 240);
+}
+
+a:hover {
+  font-weight: bold;
+}
