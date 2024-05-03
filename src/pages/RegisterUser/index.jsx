@@ -127,14 +127,14 @@ function RegisterUser() {
         >
           Save
         </button>
-        <button
+        {/* <button
           onClick={() => {
             getusers();
             setNewUser(blankUser);
           }}
         >
           Refresh
-        </button>
+        </button> */}
         <button onClick={handleClick(viewRegister, setViewRegister)}>
           Go back
         </button>
