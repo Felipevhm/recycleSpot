@@ -1,71 +1,100 @@
 import { useContext, useState, useEffect } from "react";
-import { AppContext } from "../../context/AppContext";
+import { AppContext } from "./../../context/AppContext";
 
 import styles from "./styles.module.css";
 
 function RegisterCollectPoint() {
   const {
-    users, //collectPoints
-    newUser, //newCollectPoint
-    blankUser, //BlankCollectPoint
-    nameExists,  // ?
-    logInUser, // X
-    setNewUser, // setNewCollectPoint
-    registerUser, //registerCollectPoint
-    updateUser, // updateCollectPoint
-    deleteUser, // deleteCollectPoint
-    getusers, //getCollectPoints
-    getuserById, // getCollectPointsById?
+    collectPoints, //collectPoints
+    newCollectPoint, //newCollectPoint
+    blankCollectPoint, //BlankCollectPoint
+    setNewCollectPoint, // setNewCollectPoint
+    registerCollectPoint, //registerCollectPoint
+
+    nameExists, // ?
+    updateCollectPoint, // updateCollectPoint
+    deleteCollectPoint, // deleteCollectPoint
+    getCollectPoints, //getCollectPoints
+    getCollectPointById, // getCollectPointById
+
+    clickedOnEdit,
+    setClickedOnEdit,
   } = useContext(AppContext);
 
-
-  const handleClick = (state, setFcn) => {
-    return () => setFcn(!state);
-  };
+  //   const handleClick = (state, setFcn) => {
+  //     return () => setFcn(!state);
+  //   };
 
   return (
     <div className={styles.main}>
-{/* -----------------------now the register----------------------------------------- */}
-      <div
+      {/* -----------------------now the register----------------------------------------- */}
 
+      <h1>Register Collect Point</h1>
+      <input
+        type="text"
+        value={newCollectPoint.name}
+        placeholder="Enter Collect Point name"
+        onChange={(event) =>
+          setNewCollectPoint({ ...newCollectPoint, name: event.target.value })
+        }
+      />
+      <input
+        type="email"
+        value={newCollectPoint.email}
+        placeholder="Enter Collect Point email"
+        onChange={(event) =>
+          setNewCollectPoint({ ...newCollectPoint, email: event.target.value })
+        }
+      />
+      <input
+        type="password"
+        value={newCollectPoint.password}
+        placeholder="Enter Collect Point password"
+        onChange={(event) =>
+          setNewCollectPoint({
+            ...newCollectPoint,
+            password: event.target.value,
+          })
+        }
+      />
+      <button
+        onClick={() => {
+          registerCollectPoint(newCollectPoint);
+          setNewCollectPoint(blankCollectPoint);
+        }}
       >
-        <h1>Register Collect Point</h1>
-        <input
-          type="text"
-          value={newUser.name}
-          placeholder="Enter user name"
-          onChange={(event) =>
-            setNewUser({ ...newUser, name: event.target.value })
-          }
-        />
-        <input
-          type="email"
-          value={newUser.email}
-          placeholder="Enter user email"
-          onChange={(event) =>
-            setNewUser({ ...newUser, email: event.target.value })
-          }
-        />
-        <input
-          type="password"
-          value={newUser.password}
-          placeholder="Enter user password"
-          onChange={(event) =>
-            setNewUser({ ...newUser, password: event.target.value })
-          }
-        />
-        <button
+        Save
+      </button>
+
+       <button
           onClick={() => {
-            registerUser(newUser);
-            setNewUser(blankUser);
+            getCollectPoints();
+            setClickedOnEdit({ isEdit: false, editId:""});
+            setNewCollectPoint(blankCollectPoint);
           }}
         >
-          Save
+          Refresh
         </button>
-      </div>
+
+      {!!collectPoints &&
+        collectPoints.map((collectPoint, idx) => (
+          <div key={idx}>
+            <h3 key={collectPoint.id}>{collectPoint.name}</h3>
+            <button onClick={() => deleteCollectPoint(collectPoint.id)}>
+              Delete
+            </button>
+            <button
+              onClick={() => {
+                getCollectPointById(collectPoint.id);
+                setClickedOnEdit({ isEdit: true, editId: collectPoint.id });
+              }}
+            >
+              Edit
+            </button>
+          </div>
+        ))}
+
     </div>
-
-
   );
 }
 

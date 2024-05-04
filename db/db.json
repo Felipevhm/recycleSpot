@@ -35,7 +35,26 @@
       "name": "Julia",
       "email": "j@a.com",
       "password": "j"
+    },
+    {
+      "id": "ad85",
+      "name": "a",
+      "email": "",
+      "password": ""
     }
   ],
-  "recyclingSpots": []
+  "collect-points": [
+    {
+      "id": "1557",
+      "name": "Pikachu land",
+      "email": "p@k.com",
+      "password": "mm"
+    },
+    {
+      "id": "fb02",
+      "name": "Robaldo",
+      "email": "",
+      "password": ""
+    }
+  ]
 }
