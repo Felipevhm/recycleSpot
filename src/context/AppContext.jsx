@@ -11,8 +11,11 @@ export const AppContextProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
   const [newUser, setNewUser] = useState(blankUser);
   const [loginStatus, setLoginStatus] = useState({ status: false, userId: "" });
-  const [clickedOnEdit, setClickedOnEdit] = useState({isEdit: false,editId: ""});
-  
+  const [clickedOnEdit, setClickedOnEdit] = useState({
+    isEdit: false,
+    editId: "",
+  });
+
   useEffect(() => {
     getusers();
   }, []);
@@ -51,13 +54,13 @@ export const AppContextProvider = ({ children }) => {
     const searchResult = nameExists(users, user.name);
 
     if (user.name == "") {
-      alert("User field needs a name!");
+      alert("❌ User field needs a name!");
     }
     if (searchResult.result) {
-      alert("Name already in use and will be updated!");
+      alert("✅ Name registered and will be updated!");
       updateUser(user, searchResult.foundElement.id);
     } else {
-      alert("Name not yet used!");
+      alert("💡 Name not used yet!");
 
       setUsers([...users, user]);
       fetch("http://localhost:3000/users", {
@@ -66,10 +69,10 @@ export const AppContextProvider = ({ children }) => {
         headers: { "Content-Type": "application/json" },
       })
         .then(() => {
-          window.alert("User registered successfully!");
+          window.alert("✅ User registered successfully!");
           getusers();
         })
-        .catch((error) => window.alert("User not registered!", error));
+        .catch((error) => window.alert("❌ User not registered!", error));
     }
   }
 
@@ -77,16 +80,16 @@ export const AppContextProvider = ({ children }) => {
     const foundUser = nameExists(users, name);
 
     if (foundUser.result) {
-      alert("Log in: User identified.");
+      alert("Log in: ✅ - User identified.");
       if (foundUser.foundElement.password === password) {
-        alert("Correct password!");
+        alert("✅ Correct password!");
         setLoginStatus({ status: true, userId: foundUser.foundElement.id });
       } else {
-        alert("Incorrect Password!");
+        alert("❌ Incorrect Password!");
       }
     } else {
       alert(
-        "Log in: User not registered, please try again after registration."
+        "Log in: ❌ - User not registered, please try again after registration."
       );
     }
   }
@@ -96,16 +99,16 @@ export const AppContextProvider = ({ children }) => {
       method: "DELETE",
     })
       .then(() => {
-        window.alert("User deleted successfully!");
+        window.alert("✅ User deleted successfully!");
         setNewUser(blankUser);
         getusers();
       })
-      .catch((error) => window.alert("User not deleted!", error));
+      .catch((error) => window.alert("❌ User not deleted!", error));
   }
 
   function updateUser(user, id) {
     if (user.name == "") {
-      alert("User field needs a name!");
+      alert("❌ User field needs a name!");
     }
     fetch("http://localhost:3000/users/" + id, {
       method: "PUT",
@@ -113,105 +116,123 @@ export const AppContextProvider = ({ children }) => {
       headers: { "Content-Type": "application/json" },
     })
       .then(() => {
-        window.alert("User updated successfully!");
+        window.alert("✅ User updated successfully!");
         getusers();
       })
-      .catch((error) => window.alert("User not registered!", error));
+      .catch((error) => window.alert("❌ User not registered!", error));
   }
 
-// Collect Point Functions and variables: --------------------------------
-const blankCollectPoint = {
-  name: "",
-  email: "",
-  password: "",
-};
-const [collectPoints, setCollectPoints] = useState([]);
-const [newCollectPoint, setNewCollectPoint] = useState(blankCollectPoint);
+  // Collect Point Functions and variables: --------------------------------
+  const blankCollectPoint = {
+    name: "",
+    email: "",
+    password: "",
+  };
+  const [collectPoints, setCollectPoints] = useState([]);
+  const [newCollectPoint, setNewCollectPoint] = useState(blankCollectPoint);
 
-useEffect(() => {
-  getCollectPoints();
-}, []);
+  useEffect(() => {
+    getCollectPoints();
+  }, []);
 
+  function getCollectPoints() {
+    fetch("http://localhost:3000/collect-points")
+      .then((response) => response.json())
+      .then((data) => setCollectPoints(data))
+      .catch((error) => console.log(error));
+  }
 
-function getCollectPoints() {
-  fetch("http://localhost:3000/collect-points")
-    .then((response) => response.json())
-    .then((data) => setCollectPoints(data))
-    .catch((error) => console.log(error));
-}
+  function getCollectPointById(id) {
+    fetch("http://localhost:3000/collect-points/" + id)
+      .then((response) => response.json())
+      .then((data) => {
+        setCollectPoints([data]);
+        setNewCollectPoint(data);
+      })
+      .catch((error) => console.log(error));
+  }
 
-function getCollectPointById(id) {
-  fetch("http://localhost:3000/collect-points/" + id)
-    .then((response) => response.json())
-    .then((data) => {
-      setCollectPoints([data]);
-      setNewCollectPoint(data);
+  function registerCollectPoint(collectPoint) {
+    const searchResult = nameExists(collectPoints, collectPoint.name);
+
+    if (collectPoint.name == "") {
+      alert("❌ Collect point field needs a name!");
+      return;
+    }
+    if (searchResult.result) {
+      alert("✅ Name registered and will be updated!");
+
+      updateCollectPoint(collectPoint, searchResult.foundElement.id);
+    } else {
+      alert("💡 Name not used yet!");
+
+      if (clickedOnEdit.isEdit) {
+        deleteCollectPoint(clickedOnEdit.editId);
+        setClickedOnEdit({ isEdit: false, editId: "" });
+      }
+
+      setCollectPoints([...collectPoints, collectPoint]);
+      fetch("http://localhost:3000/collect-points", {
+        method: "POST",
+        body: JSON.stringify(collectPoint),
+        headers: { "Content-Type": "application/json" },
+      })
+        .then(() => {
+          window.alert("✅ Collect point registered successfully!");
+          getCollectPoints();
+        })
+        .catch((error) => window.alert("❌ Collect point not registered!", error));
+    }
+  }
+
+  function deleteCollectPoint(id) {
+    fetch("http://localhost:3000/collect-points/" + id, {
+      method: "DELETE",
     })
-    .catch((error) => console.log(error));
-}
-
-function registerCollectPoint(collectPoint) {
-  const searchResult = nameExists(collectPoints, collectPoint.name);
-
-  if (collectPoint.name == "") {
-    alert("Collect point field needs a name!");
+      .then(() => {
+        window.alert("✅ Collect point deleted successfully!");
+        setNewCollectPoint(blankCollectPoint);
+        getCollectPoints();
+      })
+      .catch((error) => window.alert("❌ Collect point not deleted!", error));
   }
-  if (searchResult.result) {
-    alert("Name already in use and will be updated!");
-   
-    updateCollectPoint(collectPoint, searchResult.foundElement.id);
-  } else {
-    alert("Name not yet used!");
-    
-  
-    if(clickedOnEdit.isEdit){
-      deleteCollectPoint(clickedOnEdit.editId)
-      setClickedOnEdit({ isEdit:false,editId:""})
+
+  function updateCollectPoint(collectPoint, id) {
+    const searchResult = nameExists(collectPoints, collectPoint.name);
+
+    if (collectPoint.name == "") {
+      alert("❌ Collect point field needs a name!");
+      return;
+    }
+    if (searchResult.result) {
+      alert("✅ Name registered and will be updated!");
+    } else {
+
+      if(clickedOnEdit.isEdit){
+        alert("💡 Collect point info will be updated.");
+      }
+      else{
+        alert("❌ Name not registered and can't be updated. \n\n💡 Please use the register page for new entries.");
+        return;
+      }
+      
     }
 
-    setCollectPoints([...collectPoints, collectPoint]);
-    fetch("http://localhost:3000/collect-points", {
-      method: "POST",
+    fetch("http://localhost:3000/collect-points/" + id, {
+      method: "PUT",
       body: JSON.stringify(collectPoint),
       headers: { "Content-Type": "application/json" },
     })
       .then(() => {
-        window.alert("Collect point registered successfully!");
+        window.alert("✅ Collect point updated successfully!");
         getCollectPoints();
+        if(clickedOnEdit.isEdit){
+          setClickedOnEdit({ isEdit: false, editId: "" });
+        }
+
       })
-      .catch((error) => window.alert("Collect point not registered!", error));
+      .catch((error) => window.alert("❌ Collect point not registered!", error));
   }
-}
-
-function deleteCollectPoint(id) {
-  fetch("http://localhost:3000/collect-points/" + id, {
-    method: "DELETE",
-  })
-    .then(() => {
-      window.alert("Collect point deleted successfully!");
-      setNewCollectPoint(blankCollectPoint);
-      getCollectPoints();
-    })
-    .catch((error) => window.alert("Collect point not deleted!", error));
-}
-
-function updateCollectPoint(collectPoint, id) {
-  if (collectPoint.name == "") {
-    alert("Collect point field needs a name!");
-  }
-  fetch("http://localhost:3000/collect-points/" + id, {
-    method: "PUT",
-    body: JSON.stringify(collectPoint),
-    headers: { "Content-Type": "application/json" },
-  })
-    .then(() => {
-      window.alert("Collect point updated successfully!");
-      getCollectPoints();
-    })
-    .catch((error) => window.alert("Collect point not registered!", error));
-}
-
-
 
   return (
     <>
@@ -228,7 +249,7 @@ function updateCollectPoint(collectPoint, id) {
           updateUser,
           getusers,
           getuserById,
-          // Collect point  
+          // Collect point
           collectPoints,
           newCollectPoint,
           blankCollectPoint,
@@ -239,7 +260,7 @@ function updateCollectPoint(collectPoint, id) {
           getCollectPoints,
           getCollectPointById,
 
-          clickedOnEdit, 
+          clickedOnEdit,
           setClickedOnEdit,
         }}
       >
