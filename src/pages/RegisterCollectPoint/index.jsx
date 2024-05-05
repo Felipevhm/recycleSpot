@@ -76,23 +76,7 @@ function RegisterCollectPoint() {
           Refresh
         </button>
 
-      {!!collectPoints &&
-        collectPoints.map((collectPoint, idx) => (
-          <div key={idx}>
-            <h3 key={collectPoint.id}>{collectPoint.name}</h3>
-            <button onClick={() => deleteCollectPoint(collectPoint.id)}>
-              Delete
-            </button>
-            <button
-              onClick={() => {
-                getCollectPointById(collectPoint.id);
-                setClickedOnEdit({ isEdit: true, editId: collectPoint.id });
-              }}
-            >
-              Edit
-            </button>
-          </div>
-        ))}
+    
 
     </div>
   );
