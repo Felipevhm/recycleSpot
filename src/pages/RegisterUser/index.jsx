@@ -52,11 +52,11 @@ function RegisterUser() {
         <h1>Log in</h1>
 
         <input
-          type="text"
-          value={newUser.name}
-          placeholder="Enter user name"
+          type="email"
+          value={newUser.email}
+          placeholder="Enter user email"
           onChange={(event) =>
-            setNewUser({ ...newUser, name: event.target.value })
+            setNewUser({ ...newUser, email: event.target.value })
           }
         />
         <input
@@ -69,7 +69,7 @@ function RegisterUser() {
         />
         <button
           onClick={() => {
-            logInUser(newUser.name,newUser.password);
+            logInUser(newUser);
             setNewUser(blankUser);
           }}
         >
