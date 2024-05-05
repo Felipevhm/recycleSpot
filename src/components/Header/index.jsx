@@ -8,7 +8,7 @@ function Header() {
       <div className="links">
 
         <Link to="dashboard">Dashboard</Link>
-        <Link to="/list-collect-point">Collect Points List</Link>
+        <Link to="/list-collect-points">Collect Points List</Link>
       </div>
     </div>
   );

@@ -49,6 +49,12 @@
       "name": "Pikachu land",
       "email": "p@k.com",
       "password": "mm"
+    },
+    {
+      "id": "0e49",
+      "name": "Dinossauro",
+      "email": "dino@ssauro.com",
+      "password": "dino"
     }
   ]
 }
