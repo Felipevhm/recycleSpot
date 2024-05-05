@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect } from "react";
-import { UsersContext } from "../../context/UsersContext";
+import { AppContext } from "../../context/AppContext";
 
 import styles from "./index.module.css";
 
@@ -16,7 +16,7 @@ function RegisterUser() {
     deleteUser,
     getusers,
     getuserById,
-  } = useContext(UsersContext);
+  } = useContext(AppContext);
 
   const [viewRegister, setViewRegister] = useState(false);
   const [viewLogIn, setViewLogIn] = useState(false);
