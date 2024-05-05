@@ -8,6 +8,7 @@ export const AppContextProvider = ({ children }) => {
     email: "",
     password: "",
   };
+
   const [users, setUsers] = useState([]);
   const [newUser, setNewUser] = useState(blankUser);
   const [loginStatus, setLoginStatus] = useState({ status: false, userId: "" });
@@ -15,14 +16,10 @@ export const AppContextProvider = ({ children }) => {
     isEdit: false,
     editId: "",
   });
+  const [totalUsers, setTotalUsers] = useState(0);
+  const [totalCollectPoints, setTotalCollectPoints] = useState(0);
 
-  useEffect(() => {
-    getusers();
-  }, []);
 
-  useEffect(() => {
-    console.log(loginStatus);
-  }, [loginStatus]);
 
   function nameExists(arrayOfObjects, name) {
     const foundElement = arrayOfObjects.find((user) => user.name === name);
@@ -234,6 +231,25 @@ export const AppContextProvider = ({ children }) => {
       .catch((error) => window.alert("❌ Collect point not registered!", error));
   }
 
+
+  useEffect(() => {
+    let sumOfUsers = users.length
+    setTotalUsers(sumOfUsers);
+  }, [users]);
+
+  useEffect(() => {
+    let sumOfCollectPoints = collectPoints.length
+    setTotalCollectPoints(sumOfCollectPoints);
+  }, [collectPoints]);
+
+
+  useEffect(() => {
+    getusers();
+  }, []);
+
+  useEffect(() => {
+    console.log(loginStatus);
+  }, [loginStatus]);
   return (
     <>
       <AppContext.Provider
@@ -262,6 +278,8 @@ export const AppContextProvider = ({ children }) => {
 
           clickedOnEdit,
           setClickedOnEdit,
+          totalUsers,
+          totalCollectPoints
         }}
       >
         {children}

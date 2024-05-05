@@ -27,6 +27,9 @@ function RegisterUser() {
 
   return (
     <div className={styles.main}>
+      <img className={(!viewLogIn)&&(!viewRegister)?"":styles.omitted} width={200} height={200} src="/logo.png" alt=""  />
+
+       <div className={styles.content}>
       <button
         className={viewRegister || viewLogIn ? styles.omitted : ""}
         onClick={handleClick(viewRegister, setViewRegister)}
@@ -127,19 +130,13 @@ function RegisterUser() {
         >
           Save
         </button>
-        {/* <button
-          onClick={() => {
-            getusers();
-            setNewUser(blankUser);
-          }}
-        >
-          Refresh
-        </button> */}
         <button onClick={handleClick(viewRegister, setViewRegister)}>
           Go back
         </button>
       </div>
     </div>
+    </div>
+   
 
 
   );

@@ -41,15 +41,15 @@
       "name": "a",
       "email": "",
       "password": ""
+    },
+    {
+      "id": "12fd",
+      "name": "Renan",
+      "email": "",
+      "password": ""
     }
   ],
   "collect-points": [
-    {
-      "id": "b1b8",
-      "name": "Richard's place",
-      "email": "",
-      "password": ""
-    },
     {
       "id": "4b33",
       "name": "Itacorubi Point",
@@ -65,6 +65,12 @@
     {
       "id": "2d70",
       "name": "Eco Point Canasvieiras",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "b665",
+      "name": "Lagoa da Conceição Eco Point",
       "email": "",
       "password": ""
     }
