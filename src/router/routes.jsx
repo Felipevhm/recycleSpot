@@ -3,7 +3,7 @@ import App from "./../App"
 import RegisterUser from "../pages/RegisterUser";
 import Dashboard from "../pages/Dashboard";
 import RegisterCollectPoint from "../pages/RegisterCollectPoint";
-import ListCollectPoint from "../pages/ListCollectPoint";
+import ListCollectPoints from "../pages/ListCollectPoints";
 
 const routes = createBrowserRouter([
   {
@@ -23,8 +23,8 @@ const routes = createBrowserRouter([
         element: <RegisterCollectPoint />,
       },
       {
-        path: "/list-collect-point",
-        element: <ListCollectPoint />,
+        path: "/list-collect-points",
+        element: <ListCollectPoints />,
       },]
   },
 ]);

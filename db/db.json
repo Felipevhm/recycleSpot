@@ -45,10 +45,28 @@
   ],
   "collect-points": [
     {
-      "id": "1557",
-      "name": "Pikachu land",
-      "email": "p@k.com",
-      "password": "mm"
+      "id": "b1b8",
+      "name": "Richard's place",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "4b33",
+      "name": "Itacorubi Point",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "3bab",
+      "name": "Centro point",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "2d70",
+      "name": "Eco Point Canasvieiras",
+      "email": "",
+      "password": ""
     }
   ]
 }
