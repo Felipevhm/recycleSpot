@@ -73,22 +73,45 @@ export const AppContextProvider = ({ children }) => {
     }
   }
 
-  function logInUser(name, password) {
-    const foundUser = nameExists(users, name);
+  async function logInUser(typedLogin){
+    try {
+      let userExists = false
+      const response = await fetch("http://localhost:3000/users")
+      const data = await response.json()
 
-    if (foundUser.result) {
-      alert("Log in: ✅ - User identified.");
-      if (foundUser.foundElement.password === password) {
-        alert("✅ Correct password!");
-        setLoginStatus({ status: true, userId: foundUser.foundElement.id });
-      } else {
-        alert("❌ Incorrect Password!");
+      data.map(user => {
+        
+        if(user.email === typedLogin.email){
+          alert("Log in: ✅ - User identified.");
+          userExists = true
+          if(user.password === typedLogin.password){
+            localStorage.setItem("userAuthentication", true)
+            alert("Log in: Done. ✅  Welcome, "+user.name +"!");
+            window.location.href = "/"
+            return
+          }
+
+          alert("❌ Incorrect Password!");
+          return
+        }
+
+      })
+
+      if(!userExists){
+        alert(
+          "Log in: ❌ - User not registered, please try again after registration."
+        );
       }
-    } else {
-      alert(
-        "Log in: ❌ - User not registered, please try again after registration."
-      );
+
+    } catch {(e)=>{console.log(e)}
+
     }
+  }
+
+  function quitSession(){
+    localStorage.removeItem('userAuthentication');
+
+
   }
 
   function deleteUser(id) {
@@ -259,6 +282,7 @@ export const AppContextProvider = ({ children }) => {
           blankUser,
           nameExists,
           logInUser,
+          quitSession,
           setNewUser,
           registerUser,
           deleteUser,

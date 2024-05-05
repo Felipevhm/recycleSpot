@@ -4,8 +4,10 @@ import App from './App.jsx'
 import './index.css'
 import { AppContextProvider } from './context/AppContext.jsx'
 
-import { RouterProvider } from 'react-router-dom'
+import { RouterProvider,Navigate } from 'react-router-dom'
 import routes from './router/routes.jsx'
+
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 <AppContextProvider>

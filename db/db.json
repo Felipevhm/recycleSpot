@@ -4,7 +4,7 @@
       "id": "1",
       "name": "Jorge",
       "email": "a@e.com",
-      "password": 1
+      "password": "1"
     },
     {
       "name": "clara",
@@ -37,16 +37,10 @@
       "password": "j"
     },
     {
-      "id": "ad85",
-      "name": "a",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "12fd",
-      "name": "Renan",
-      "email": "",
-      "password": ""
+      "id": "46c0",
+      "name": "Neide",
+      "email": "n@n.com",
+      "password": "5"
     }
   ],
   "collect-points": [
