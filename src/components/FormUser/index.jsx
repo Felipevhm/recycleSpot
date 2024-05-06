@@ -5,7 +5,6 @@ import { AppContext } from "../../context/AppContext";
 
 function FormUser() {
   const {
-
     newUser,
     blankUser,
     nameExists,
@@ -64,6 +63,7 @@ function FormUser() {
       <form action="" onSubmit={handleSubmit(handleCreateUser)}>
         <div className={styles.userInteraction}>
           <div className={styles.inputsDiv}>
+
             <div className={styles.personalInfo}>
               <input
                 type="text"
@@ -163,12 +163,11 @@ function FormUser() {
                 {...register("state")}
               />
             </div>
+            
           </div>
-          <button type="submit">Register user</button>
-          <button onClick={handleClickUser(viewRegister, setViewRegister)}>
-            Go back
-          </button>{" "}
-          
+          <button style={{ height: "50px", width: "100px" }} type="submit">
+            Register user
+          </button>
         </div>
         <div className={styles.errorsDiv}>
           {errors.name && <p>{errors.name.message}</p>}
@@ -187,6 +186,12 @@ function FormUser() {
           {errors.state && <p>{errors.state.message}</p>}
         </div>
       </form>
+      <button
+        style={{ height: "50px", width: "100px" }}
+        onClick={handleClickUser(viewRegister, setViewRegister)}
+      >
+        Go back
+      </button>
     </div>
   );
 }

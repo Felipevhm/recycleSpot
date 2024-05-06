@@ -22,7 +22,7 @@ html,#root{
  
  .main{
    
-   height: 100vh;
+   height: 100%;
    width: 100vw;
 
    display: flex;
@@ -42,6 +42,6 @@ html,#root{
  }
 
  button{
-  width: 50%;
-  height: 100%;
+  width: 100px;
+  height: 50px;
  }

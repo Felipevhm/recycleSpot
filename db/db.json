@@ -43,9 +43,8 @@
       "password": "5"
     },
     {
-      "id": "e5d7",
       "name": "Felipe",
-      "email": "a@a.com",
+      "email": "e@e.com",
       "password": "1",
       "gender": "M",
       "cpf": "1",
@@ -56,7 +55,24 @@
       "addressLine2": "",
       "neighborhood": "Centro",
       "city": "Campos dos Goytacazes",
-      "state": "RJ"
+      "state": "RJ",
+      "id": "e5d7"
+    },
+    {
+      "id": "8865",
+      "name": "Mario",
+      "email": "k@a.com",
+      "password": "a",
+      "gender": "M",
+      "cpf": "445",
+      "birth": "2024-05-14",
+      "cep": "88036002",
+      "street": "Rua Lauro Linhares",
+      "number": "2",
+      "addressLine2": "11",
+      "neighborhood": "Trindade",
+      "city": "Florianópolis",
+      "state": "SC"
     }
   ],
   "collect-points": [
