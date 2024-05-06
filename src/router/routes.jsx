@@ -5,6 +5,8 @@ import Dashboard from "../pages/Dashboard";
 import RegisterCollectPoint from "../pages/RegisterCollectPoint";
 import ListCollectPoints from "../pages/ListCollectPoints";
 
+import CepSearch from "../components/FormUser/index.jsx";
+
 let isAuthenticated =
   JSON.parse(localStorage.getItem("userAuthentication")) || false;
 
@@ -36,6 +38,11 @@ const routes = createBrowserRouter([
       {
         path: "/list-collect-points",
         element: <ListCollectPoints />,
+      },
+
+      {
+        path: "/cep",
+        element: <CepSearch />,
       },
     ],
   },
