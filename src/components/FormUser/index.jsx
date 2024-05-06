@@ -1,7 +1,29 @@
 import { useForm } from "react-hook-form";
 import styles from "./index.module.css";
+import { useContext } from "react";
+import { AppContext } from "../../context/AppContext";
 
 function FormUser() {
+  const {
+
+    newUser,
+    blankUser,
+    nameExists,
+    logInUser,
+    setNewUser,
+    registerUser,
+    updateUser,
+    deleteUser,
+    getusers,
+    getuserById,
+    viewRegister,
+    setViewRegister,
+    viewLogIn,
+    setViewLogIn,
+
+    handleClickUser,
+  } = useContext(AppContext);
+
   const {
     register,
     handleSubmit,
@@ -15,8 +37,9 @@ function FormUser() {
     },
   });
 
-  const handleCreateUser = async (dados) => {
-    console.log(dados);
+  const handleCreateUser = async (data) => {
+    registerUser(data);
+    //console.log(data);
   };
 
   const findCep = () => {
@@ -36,109 +59,116 @@ function FormUser() {
   };
   return (
     <div className={styles.main}>
-    <h1> Register User</h1>
+      <img width={150} height={150} src="/logo.png" alt="" />
+      <h1> Register User</h1>
       <form action="" onSubmit={handleSubmit(handleCreateUser)}>
-      <div className={styles.userInteraction}>
-        <div className={styles.inputsDiv}>
+        <div className={styles.userInteraction}>
+          <div className={styles.inputsDiv}>
+            <div className={styles.personalInfo}>
+              <input
+                type="text"
+                name="name"
+                placeholder="name"
+                {...register("name", { required: "Name field is required" })}
+              />
 
-          <div className={styles.personalInfo}>
-            <input
-              type="text"
-              name="name"
-              placeholder="name"
-              {...register("name", { required: "Name field is required" })}
-            />
+              <input
+                type="email"
+                name="email"
+                placeholder="email"
+                {...register("email", { required: "Email field is required" })}
+              />
 
-            <input
-              type="email"
-              name="email"
-              placeholder="email"
-              {...register("email", { required: "Email field is required" })}
-            />
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                {...register("password", {
+                  required: "Password field is required",
+                })}
+              />
+              <select
+                name="gender"
+                {...register("gender", {
+                  required: "Gender field is required",
+                })}
+              >
+                <option value="">Select...</option>
+                <option value="M">M</option>
+                <option value="F">F</option>
+              </select>
 
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              {...register("password", {
-                required: "Password field is required",
-              })}
-            />
-            <select
-              name="gender"
-              {...register("gender", { required: "Gender field is required" })}
-            >
-              <option value="">Select...</option>
-              <option value="M">M</option>
-              <option value="F">F</option>
-            </select>
+              <input
+                type="text"
+                name="cpf"
+                placeholder="CPF"
+                {...register("cpf", { required: "CPF field is required" })}
+              />
 
-            <input
-              type="text"
-              name="cpf"
-              placeholder="CPF"
-              {...register("cpf", { required: "CPF field is required" })}
-            />
+              <input
+                type="date"
+                name="birth"
+                placeholder="Date of Birth"
+                {...register("birth")}
+              />
+            </div>
 
-            <input
-              type="date"
-              name="birth"
-              placeholder="Date of Birth"
-              {...register("birth")}
-            />
+            <div className={styles.addressGroup}>
+              <input
+                type="text"
+                name="cep"
+                {...register("cep", {
+                  required: "CEP field is required",
+                  onBlur: () => findCep(),
+                })}
+                placeholder="CEP"
+              />
+
+              <input
+                type="text"
+                name="street"
+                placeholder="Street Name"
+                {...register("street")}
+              />
+              <input
+                type="text"
+                name="number"
+                placeholder="Number"
+                {...register("number", {
+                  required: "Number field is required",
+                })}
+              />
+              <input
+                type="text"
+                name="addressLine2"
+                placeholder="Address Line 2"
+                {...register("addressLine2")}
+              />
+              <input
+                type="text"
+                name="neighborhood"
+                placeholder="Neighborhood"
+                {...register("neighborhood")}
+              />
+              <input
+                type="text"
+                name="city"
+                placeholder="City"
+                {...register("city")}
+              />
+              <input
+                type="text"
+                name="state"
+                placeholder="State"
+                {...register("state")}
+              />
+            </div>
           </div>
-
-          <div className={styles.addressGroup}>
-            <input
-              type="text"
-              name="cep"
-              {...register("cep", {
-                required: "CEP field is required",
-                onBlur: () => findCep(),
-              })}
-              placeholder="CEP"
-            />
-
-            <input
-              type="text"
-              name="street"
-              placeholder="Street Name"
-              {...register("street")}
-            />
-            <input
-              type="text"
-              name="number"
-              placeholder="Number"
-              {...register("number", { required: "Number field is required" })}
-            />
-            <input
-              type="text"
-              name="addressLine2"
-              placeholder="Address Line 2"
-              {...register("addressLine2")}
-            />
-            <input
-              type="text"
-              name="neighborhood"
-              placeholder="Neighborhood"
-              {...register("neighborhood")}
-            />
-            <input
-              type="text"
-              name="city"
-              placeholder="City"
-              {...register("city")}
-            />
-            <input
-              type="text"
-              name="state"
-              placeholder="State"
-              {...register("state")}
-            />
-          </div>
-
-        </div>
-        <button type="submit">Register user</button>
+          <button type="submit">Register user</button>
+          <button onClick={handleClickUser(viewRegister, setViewRegister)}>
+            Go back
+          </button>{" "}
+          
         </div>
         <div className={styles.errorsDiv}>
           {errors.name && <p>{errors.name.message}</p>}

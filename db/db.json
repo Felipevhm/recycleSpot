@@ -41,6 +41,22 @@
       "name": "Neide",
       "email": "n@n.com",
       "password": "5"
+    },
+    {
+      "id": "e5d7",
+      "name": "Felipe",
+      "email": "a@a.com",
+      "password": "1",
+      "gender": "M",
+      "cpf": "1",
+      "birth": "2024-05-20",
+      "cep": "28010400",
+      "street": "Rua Gilberto Siqueira",
+      "number": "101",
+      "addressLine2": "",
+      "neighborhood": "Centro",
+      "city": "Campos dos Goytacazes",
+      "state": "RJ"
     }
   ],
   "collect-points": [

@@ -1,5 +1,6 @@
 import { useContext, useState, useEffect } from "react";
 import { AppContext } from "../../context/AppContext";
+import FormUser from './../../components/FormUser'
 
 import styles from "./index.module.css";
 
@@ -16,30 +17,34 @@ function RegisterUser() {
     deleteUser,
     getusers,
     getuserById,
+    viewRegister,
+    setViewRegister,
+    viewLogIn,
+    setViewLogIn,
+
+    handleClickUser,
   } = useContext(AppContext);
 
-  const [viewRegister, setViewRegister] = useState(false);
-  const [viewLogIn, setViewLogIn] = useState(false);
-
-  const handleClick = (state, setFcn) => {
-    return () => setFcn(!state);
-  };
+ 
 
   return (
     <div className={styles.main}>
-      <img className={(!viewLogIn)&&(!viewRegister)?"":styles.omitted} width={200} height={200} src="/logo.png" alt=""  />
+    <h1 className={(!viewLogIn)&&(!viewRegister)?"":styles.omitted}>Welcome to Recycle Spot!</h1>
+      <img className={
+        // (!viewLogIn)&&
+      (!viewRegister)?"":styles.omitted} width={200} height={200} src="/logo.png" alt=""  />
 
        <div className={styles.content}>
       <button
         className={viewRegister || viewLogIn ? styles.omitted : ""}
-        onClick={handleClick(viewRegister, setViewRegister)}
+        onClick={handleClickUser(viewRegister, setViewRegister)}
       >
         Register User
       </button>
 
       <button
         className={viewRegister || viewLogIn ? styles.omitted : ""}
-        onClick={handleClick(viewLogIn, setViewLogIn)}
+        onClick={handleClickUser(viewLogIn, setViewLogIn)}
       >
         Log in
       </button>
@@ -75,7 +80,7 @@ function RegisterUser() {
         >
           Log in
         </button>
-        <button onClick={handleClick(viewLogIn, setViewLogIn)}>
+        <button onClick={handleClickUser(viewLogIn, setViewLogIn)}>
           Go back
         </button>
       </div>
@@ -86,17 +91,8 @@ function RegisterUser() {
           !viewRegister ? styles.omitted : ""
         }`}
       >
-        <h1>Register User</h1>
-        {/* {!!users &&
-        users.map((user) => (
-          <>
-            <h3 key={user.id}>{user.name}</h3>
-            <button onClick={() => deleteUser(user.id)}>Delete</button>
-            <button onClick={() => {(getuserById(user.id))
-        
-            }}>Edit</button>
-          </>
-        ))} */}
+        {/* <h1>Register User</h1>
+   
 
         <input
           type="text"
@@ -130,10 +126,19 @@ function RegisterUser() {
         >
           Save
         </button>
-        <button onClick={handleClick(viewRegister, setViewRegister)}>
+        <button onClick={handleClickUser(viewRegister, setViewRegister)}>
           Go back
-        </button>
+        </button> */}
+
+        
+
+ <FormUser />
+
       </div>
+
+    
+
+      
     </div>
     </div>
    
@@ -143,3 +148,14 @@ function RegisterUser() {
 }
 
 export default RegisterUser;
+
+     {/* {!!users &&
+        users.map((user) => (
+          <>
+            <h3 key={user.id}>{user.name}</h3>
+            <button onClick={() => deleteUser(user.id)}>Delete</button>
+            <button onClick={() => {(getuserById(user.id))
+        
+            }}>Edit</button>
+          </>
+        ))} */}
