@@ -7,6 +7,8 @@ import ListCollectPoints from "../pages/ListCollectPoints";
 
 import CepSearch from "../components/FormUser/index.jsx";
 
+import FormCollectPoint from "../components/FormCollectPoint";
+
 let isAuthenticated =
   JSON.parse(localStorage.getItem("userAuthentication")) || false;
 
@@ -19,6 +21,10 @@ const routes = createBrowserRouter([
     path: "/login",
     element: <RegisterUser />,
   },
+  {
+  path: "/register-place",
+  element: <FormCollectPoint />,
+},
   {
     path: "/",
     element: (
@@ -40,10 +46,7 @@ const routes = createBrowserRouter([
         element: <ListCollectPoints />,
       },
 
-      {
-        path: "/cep",
-        element: <CepSearch />,
-      },
+
     ],
   },
 ]);

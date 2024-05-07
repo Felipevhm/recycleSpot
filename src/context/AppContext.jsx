@@ -175,9 +175,9 @@ export const AppContextProvider = ({ children }) => {
   }
 
   function registerCollectPoint(collectPoint) {
-    const searchResult = nameExists(collectPoints, collectPoint.name);
+    const searchResult = nameExists(collectPoints, collectPoint.placeName);
 
-    if (collectPoint.name == "") {
+    if (collectPoint.placeName == "") {
       alert("❌ Collect point field needs a name!");
       return;
     }

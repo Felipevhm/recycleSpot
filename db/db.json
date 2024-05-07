@@ -99,6 +99,45 @@
       "name": "Lagoa da Conceição Eco Point",
       "email": "",
       "password": ""
+    },
+    {
+      "id": "06d7",
+      "name": "",
+      "email": "",
+      "placeName": "Ingleses",
+      "placeDescription": "Norte da Ilha-, ",
+      "creator": "8865",
+      "latitude": "-27.439688120754628",
+      "longitude": "-48.38831354460266",
+      "wasteTypes": "Paper",
+      "cep": "88058600",
+      "street": "Estrada Dom João Becker",
+      "number": "820",
+      "addressLine2": "",
+      "neighborhood": "Ingleses do Rio Vermelho",
+      "city": "Florianópolis",
+      "state": "SC"
+    },
+    {
+      "placeName": "Everywhere",
+      "placeDescription": "sdsd",
+      "creator": "3",
+      "latitude": "1122",
+      "longitude": "13131",
+      "wasteTypes": [
+        "on",
+        "on",
+        "on",
+        "on"
+      ],
+      "cep": "49000188",
+      "street": "Rua César Macieira",
+      "number": "2",
+      "addressLine2": "",
+      "neighborhood": "Aruana",
+      "city": "Aracaju",
+      "state": "SE",
+      "id": "2f15"
     }
   ]
 }
