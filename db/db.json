@@ -83,12 +83,6 @@
       "password": ""
     },
     {
-      "id": "3bab",
-      "name": "Centro point",
-      "email": "",
-      "password": ""
-    },
-    {
       "id": "2d70",
       "name": "Eco Point Canasvieiras",
       "email": "",
@@ -138,6 +132,26 @@
       "city": "Aracaju",
       "state": "SE",
       "id": "2f15"
+    },
+    {
+      "id": "5a26",
+      "placeName": "Guariuna",
+      "placeDescription": "aaa",
+      "creator": "5",
+      "latitude": "2",
+      "longitude": "3",
+      "wasteTypes": [
+        "Glass",
+        "Metal",
+        "Organic"
+      ],
+      "cep": "58411370",
+      "street": "Avenida Aeroclube",
+      "number": "2",
+      "addressLine2": "",
+      "neighborhood": "Distrito Industrial",
+      "city": "Campina Grande",
+      "state": "PB"
     }
   ]
 }

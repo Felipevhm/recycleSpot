@@ -1,73 +1,91 @@
-form{
-   display: flex;
+form {
+  display: flex;
 
-   justify-content: center;
-   padding: 20px;
-   gap: 20px;
-
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
 }
 
-form input{
-   width: 400px;
+form input {
+  width: 400px;
 }
 
-p{
-   color: red;
+p {
+  color: red;
 }
 
-.main{
-   height: 100vh;
-   width: 100vw;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   overflow-y: scroll;
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
 }
 
-.inputsDiv{
-   display: flex;
-   
-   align-items: center;
-   justify-content: center;
+.inputsDiv {
+  display: flex;
 
-   height: 100%;
+  align-items: center;
+  justify-content: center;
 
-   gap: 20px;
+  height: 100%;
+
+  gap: 20px;
 }
 
-button{
-   width: 20%;
+button {
+  width: 20%;
 }
 
-.errorsDiv{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   width: 30%;
-   
+.errorsDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
 }
 
-.placeInfo{
-   display: flex;
-   flex-direction: column;
-   gap: 10px;
-
+.placeInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.addressGroup{
-   display: flex;
-   flex-direction: column;
-   gap: 10px;
-
+.addressGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.userInteraction{
-   display: flex;
-   flex-direction: column;
+.userInteraction {
+  display: flex;
+  flex-direction: column;
 
-   align-items:flex-end;
-   justify-content: center;
+  align-items: center;
+  justify-content: center;
 
-   gap: 20px;
+  gap: 20px;
+}
+.checkBoxField {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+
+  gap: 10px;
+}
+.checkBoxWrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  width: 100%;
+  gap: 5px;
+}
+.checkBoxWrapper > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
 }

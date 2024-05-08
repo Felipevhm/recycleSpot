@@ -86,6 +86,7 @@ function FormCollectPoint() {
       <h1> Register Collect Point</h1>
       <form action="" onSubmit={handleSubmit(handleCreateCollectPoint)}>
         <div className={styles.userInteraction}>
+        
           <div className={styles.inputsDiv}>
             <div className={styles.placeInfo}>
               <input
@@ -138,20 +139,9 @@ function FormCollectPoint() {
                 })}
               />
 
-              {wasteTypes.map((type, index) => (
-                <div key={index}>
-                  <input
-                    type="checkbox"
-                    id={type}
-                    {...register("wasteTypes")}
-                  />
-                  <label htmlFor={type}>{type}</label>
-                </div>
-              ))}
-            </div>
-            {/* -------------------------------------- */}
+  
 
-            <div className={styles.addressGroup}>
+             <div className={styles.addressGroup}>
               <input
                 type="text"
                 name="cep"
@@ -201,6 +191,25 @@ function FormCollectPoint() {
                 {...register("state")}
               />
             </div>
+    
+
+            </div>
+            {/* -------------------------------------- */}
+            <div className={styles.checkBoxField} >
+              <h2>Waste Types</h2>
+              {wasteTypes.map((type, index) => (
+                <div key={index} className={styles.checkBoxWrapper}>
+                  <input
+                    type="checkbox"
+                    id={type}
+                    value={type}
+                    {...register("wasteTypes")}
+                  />
+                  <label htmlFor={type}>{type}</label>
+                </div>
+              ))}
+            </div>
+           
           </div>
           <button style={{ height: "50px", width: "100px" }} type="submit">
             Register Point
