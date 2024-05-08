@@ -36,7 +36,7 @@ p {
   gap: 20px;
 }
 
-.inputsDiv input {
+.inputsDiv input,.inputsDiv textarea {
 padding: 3px;
  }
 
