@@ -83,8 +83,10 @@ function FormCollectPoint() {
 
   return (
     <div className={styles.main}>
+    <div className={styles.h1Wrapper}>
       <h1> Register Collect Point</h1>
-      <form action="" onSubmit={handleSubmit(handleCreateCollectPoint)}>
+      </div>
+      <form  onSubmit={handleSubmit(handleCreateCollectPoint)} style={{padding:'10px'}}>
         <div className={styles.userInteraction}>
         
           <div className={styles.inputsDiv}>
@@ -193,9 +195,8 @@ function FormCollectPoint() {
             </div>
     
 
-            </div>
-            {/* -------------------------------------- */}
-            <div className={styles.checkBoxField} >
+            </div> 
+             <div className={styles.checkBoxField} >
               <h2>Waste Types</h2>
               {wasteTypes.map((type, index) => (
                 <div key={index} className={styles.checkBoxWrapper}>
@@ -209,11 +210,14 @@ function FormCollectPoint() {
                 </div>
               ))}
             </div>
-           
-          </div>
-          <button style={{ height: "50px", width: "100px" }} type="submit">
+            <button style={{ height: "50px", width: "100px" }} type="submit">
             Register Point
           </button>
+            {/* -------------------------------------- */}
+           
+           
+          </div>
+         
         </div>
         <div className={styles.errorsDiv}>
           {errors.placeName && <p>{errors.placeName.message}</p>}
