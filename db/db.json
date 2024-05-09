@@ -172,6 +172,26 @@
       "neighborhood": "Centro",
       "city": "Maricá",
       "state": "RJ"
+    },
+    {
+      "id": "2468",
+      "placeName": "Jardim São Benedito",
+      "placeDescription": "s",
+      "creator": "46c0",
+      "latitude": "434",
+      "longitude": "43434",
+      "wasteTypes": [
+        "Metal",
+        "Organic",
+        "Batteries"
+      ],
+      "cep": "28010400",
+      "street": "Rua Gilberto Siqueira",
+      "number": "543",
+      "addressLine2": "",
+      "neighborhood": "Centro",
+      "city": "Campos dos Goytacazes",
+      "state": "RJ"
     }
   ]
 }

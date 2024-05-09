@@ -22,10 +22,6 @@ const routes = createBrowserRouter([
     element: <RegisterUser />,
   },
   {
-  path: "/register-place",
-  element: <FormCollectPoint />,
-},
-  {
     path: "/",
     element: (
       <PrivateRoute>
@@ -45,8 +41,6 @@ const routes = createBrowserRouter([
         path: "/list-collect-points",
         element: <ListCollectPoints />,
       },
-
-
     ],
   },
 ]);
