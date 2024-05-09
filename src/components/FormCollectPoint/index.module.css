@@ -1,0 +1,103 @@
+form {
+  display: flex;
+
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+form input {
+  width: 400px;
+}
+
+p {
+  color: red;
+}
+
+.main {
+   /* padding-top: 10px; */
+  height: 76vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow-y: scroll;
+}
+
+.inputsDiv {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+
+  gap: 20px;
+}
+
+.inputsDiv input,.inputsDiv textarea {
+padding: 3px;
+ }
+
+button {
+  width: 20%;
+}
+
+.errorsDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+}
+
+.placeInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.addressGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.userInteraction {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+}
+.checkBoxField {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+
+  gap: 10px;
+}
+.checkBoxWrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  width: 100%;
+  gap: 5px;
+}
+.checkBoxWrapper > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.h1Wrapper{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}

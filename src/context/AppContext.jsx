@@ -19,7 +19,12 @@ export const AppContextProvider = ({ children }) => {
   const [totalUsers, setTotalUsers] = useState(0);
   const [totalCollectPoints, setTotalCollectPoints] = useState(0);
 
+  const [viewRegister, setViewRegister] = useState(false);
+  const [viewLogIn, setViewLogIn] = useState(false);
 
+  const handleClickUser = (state, setFcn) => {
+    return () => setFcn(!state);
+  };
 
   function nameExists(arrayOfObjects, name) {
     const foundElement = arrayOfObjects.find((user) => user.name === name);
@@ -73,45 +78,42 @@ export const AppContextProvider = ({ children }) => {
     }
   }
 
-  async function logInUser(typedLogin){
+  async function logInUser(typedLogin) {
     try {
-      let userExists = false
-      const response = await fetch("http://localhost:3000/users")
-      const data = await response.json()
+      let userExists = false;
+      const response = await fetch("http://localhost:3000/users");
+      const data = await response.json();
 
-      data.map(user => {
-        
-        if(user.email === typedLogin.email){
+      data.map((user) => {
+        if (user.email === typedLogin.email) {
           alert("Log in: ✅ - User identified.");
-          userExists = true
-          if(user.password === typedLogin.password){
-            localStorage.setItem("userAuthentication", true)
-            alert("Log in: Done. ✅  Welcome, "+user.name +"!");
-            window.location.href = "/"
-            return
+          userExists = true;
+          if (user.password === typedLogin.password) {
+            localStorage.setItem("userAuthentication", true);
+            alert("Log in: Done. ✅  Welcome, " + user.name + "!");
+            window.location.href = "/";
+            return;
           }
 
           alert("❌ Incorrect Password!");
-          return
+          return;
         }
+      });
 
-      })
-
-      if(!userExists){
+      if (!userExists) {
         alert(
           "Log in: ❌ - User not registered, please try again after registration."
         );
       }
-
-    } catch {(e)=>{console.log(e)}
-
+    } catch {
+      (e) => {
+        console.log(e);
+      };
     }
   }
 
-  function quitSession(){
-    localStorage.removeItem('userAuthentication');
-
-
+  function quitSession() {
+    localStorage.removeItem("userAuthentication");
   }
 
   function deleteUser(id) {
@@ -173,9 +175,9 @@ export const AppContextProvider = ({ children }) => {
   }
 
   function registerCollectPoint(collectPoint) {
-    const searchResult = nameExists(collectPoints, collectPoint.name);
+    const searchResult = nameExists(collectPoints, collectPoint.placeName);
 
-    if (collectPoint.name == "") {
+    if (collectPoint.placeName == "") {
       alert("❌ Collect point field needs a name!");
       return;
     }
@@ -201,7 +203,9 @@ export const AppContextProvider = ({ children }) => {
           window.alert("✅ Collect point registered successfully!");
           getCollectPoints();
         })
-        .catch((error) => window.alert("❌ Collect point not registered!", error));
+        .catch((error) =>
+          window.alert("❌ Collect point not registered!", error)
+        );
     }
   }
 
@@ -227,15 +231,14 @@ export const AppContextProvider = ({ children }) => {
     if (searchResult.result) {
       alert("✅ Name registered and will be updated!");
     } else {
-
-      if(clickedOnEdit.isEdit){
+      if (clickedOnEdit.isEdit) {
         alert("💡 Collect point info will be updated.");
-      }
-      else{
-        alert("❌ Name not registered and can't be updated. \n\n💡 Please use the register page for new entries.");
+      } else {
+        alert(
+          "❌ Name not registered and can't be updated. \n\n💡 Please use the register page for new entries."
+        );
         return;
       }
-      
     }
 
     fetch("http://localhost:3000/collect-points/" + id, {
@@ -246,25 +249,24 @@ export const AppContextProvider = ({ children }) => {
       .then(() => {
         window.alert("✅ Collect point updated successfully!");
         getCollectPoints();
-        if(clickedOnEdit.isEdit){
+        if (clickedOnEdit.isEdit) {
           setClickedOnEdit({ isEdit: false, editId: "" });
         }
-
       })
-      .catch((error) => window.alert("❌ Collect point not registered!", error));
+      .catch((error) =>
+        window.alert("❌ Collect point not registered!", error)
+      );
   }
 
-
   useEffect(() => {
-    let sumOfUsers = users.length
+    let sumOfUsers = users.length;
     setTotalUsers(sumOfUsers);
   }, [users]);
 
   useEffect(() => {
-    let sumOfCollectPoints = collectPoints.length
+    let sumOfCollectPoints = collectPoints.length;
     setTotalCollectPoints(sumOfCollectPoints);
   }, [collectPoints]);
-
 
   useEffect(() => {
     getusers();
@@ -303,7 +305,14 @@ export const AppContextProvider = ({ children }) => {
           clickedOnEdit,
           setClickedOnEdit,
           totalUsers,
-          totalCollectPoints
+          totalCollectPoints,
+
+          viewRegister,
+          setViewRegister,
+          viewLogIn,
+          setViewLogIn,
+
+          handleClickUser,
         }}
       >
         {children}

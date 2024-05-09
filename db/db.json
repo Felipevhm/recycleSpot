@@ -41,18 +41,44 @@
       "name": "Neide",
       "email": "n@n.com",
       "password": "5"
+    },
+    {
+      "name": "Felipe",
+      "email": "e@e.com",
+      "password": "1",
+      "gender": "M",
+      "cpf": "1",
+      "birth": "2024-05-20",
+      "cep": "28010400",
+      "street": "Rua Gilberto Siqueira",
+      "number": "101",
+      "addressLine2": "",
+      "neighborhood": "Centro",
+      "city": "Campos dos Goytacazes",
+      "state": "RJ",
+      "id": "e5d7"
+    },
+    {
+      "id": "8865",
+      "name": "Mario",
+      "email": "k@a.com",
+      "password": "a",
+      "gender": "M",
+      "cpf": "445",
+      "birth": "2024-05-14",
+      "cep": "88036002",
+      "street": "Rua Lauro Linhares",
+      "number": "2",
+      "addressLine2": "11",
+      "neighborhood": "Trindade",
+      "city": "Florianópolis",
+      "state": "SC"
     }
   ],
   "collect-points": [
     {
       "id": "4b33",
       "name": "Itacorubi Point",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "3bab",
-      "name": "Centro point",
       "email": "",
       "password": ""
     },
@@ -67,6 +93,105 @@
       "name": "Lagoa da Conceição Eco Point",
       "email": "",
       "password": ""
+    },
+    {
+      "id": "06d7",
+      "name": "",
+      "email": "",
+      "placeName": "Ingleses",
+      "placeDescription": "Norte da Ilha-, ",
+      "creator": "8865",
+      "latitude": "-27.439688120754628",
+      "longitude": "-48.38831354460266",
+      "wasteTypes": "Paper",
+      "cep": "88058600",
+      "street": "Estrada Dom João Becker",
+      "number": "820",
+      "addressLine2": "",
+      "neighborhood": "Ingleses do Rio Vermelho",
+      "city": "Florianópolis",
+      "state": "SC"
+    },
+    {
+      "placeName": "Everywhere",
+      "placeDescription": "sdsd",
+      "creator": "3",
+      "latitude": "1122",
+      "longitude": "13131",
+      "wasteTypes": [
+        "on",
+        "on",
+        "on",
+        "on"
+      ],
+      "cep": "49000188",
+      "street": "Rua César Macieira",
+      "number": "2",
+      "addressLine2": "",
+      "neighborhood": "Aruana",
+      "city": "Aracaju",
+      "state": "SE",
+      "id": "2f15"
+    },
+    {
+      "id": "5a26",
+      "placeName": "Guariuna",
+      "placeDescription": "aaa",
+      "creator": "5",
+      "latitude": "2",
+      "longitude": "3",
+      "wasteTypes": [
+        "Glass",
+        "Metal",
+        "Organic"
+      ],
+      "cep": "58411370",
+      "street": "Avenida Aeroclube",
+      "number": "2",
+      "addressLine2": "",
+      "neighborhood": "Distrito Industrial",
+      "city": "Campina Grande",
+      "state": "PB"
+    },
+    {
+      "id": "0bd4",
+      "placeName": "Maricá home",
+      "placeDescription": "aaa",
+      "creator": "ab37",
+      "latitude": "2",
+      "longitude": "3",
+      "wasteTypes": [
+        "Paper",
+        "Plastic",
+        "Batteries"
+      ],
+      "cep": "24900835",
+      "street": "Rua Gabriel Henrique de Farias Júnior",
+      "number": "4",
+      "addressLine2": "",
+      "neighborhood": "Centro",
+      "city": "Maricá",
+      "state": "RJ"
+    },
+    {
+      "id": "2468",
+      "placeName": "Jardim São Benedito",
+      "placeDescription": "s",
+      "creator": "46c0",
+      "latitude": "434",
+      "longitude": "43434",
+      "wasteTypes": [
+        "Metal",
+        "Organic",
+        "Batteries"
+      ],
+      "cep": "28010400",
+      "street": "Rua Gilberto Siqueira",
+      "number": "543",
+      "addressLine2": "",
+      "neighborhood": "Centro",
+      "city": "Campos dos Goytacazes",
+      "state": "RJ"
     }
   ]
 }

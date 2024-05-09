@@ -5,6 +5,10 @@ import Dashboard from "../pages/Dashboard";
 import RegisterCollectPoint from "../pages/RegisterCollectPoint";
 import ListCollectPoints from "../pages/ListCollectPoints";
 
+import CepSearch from "../components/FormUser/index.jsx";
+
+import FormCollectPoint from "../components/FormCollectPoint";
+
 let isAuthenticated =
   JSON.parse(localStorage.getItem("userAuthentication")) || false;
 

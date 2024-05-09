@@ -1,5 +1,6 @@
 import { useContext, useState, useEffect } from "react";
 import { AppContext } from "./../../context/AppContext";
+import FormCollectPoint from "./../../components/FormCollectPoint";
 
 import styles from "./styles.module.css";
 
@@ -29,7 +30,7 @@ function RegisterCollectPoint() {
     <div className={styles.main}>
       {/* -----------------------now the register----------------------------------------- */}
 
-      <h1>Register Collect Point</h1>
+      {/* <h1>Register Collect Point</h1>
       <input
         type="text"
         value={newCollectPoint.name}
@@ -56,8 +57,11 @@ function RegisterCollectPoint() {
             password: event.target.value,
           })
         }
-      />
-      <button
+      /> */}
+
+      <FormCollectPoint/>
+
+      {/* <button
         onClick={() => {
           registerCollectPoint(newCollectPoint);
           setNewCollectPoint(blankCollectPoint);
@@ -74,7 +78,7 @@ function RegisterCollectPoint() {
           }}
         >
           Refresh
-        </button>
+        </button> */}
 
     
 

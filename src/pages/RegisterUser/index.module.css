@@ -22,7 +22,7 @@ html,#root{
  
  .main{
    
-   height: 76vh;
+   height: 100%;
    width: 100vw;
 
    display: flex;
@@ -39,4 +39,9 @@ html,#root{
   justify-content: center;
   gap: 30px;
 
+ }
+
+ .content button{
+  width: 100px;
+  height: 50px;
  }
