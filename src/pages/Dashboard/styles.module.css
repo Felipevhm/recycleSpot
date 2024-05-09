@@ -11,3 +11,29 @@ html,#root{
    flex-direction: column;
    align-items: center;
 }
+
+.renderedList{
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+
+   align-items: center;
+}
+
+.renderedList>*{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   gap: 10px;
+}
+
+.buttonsDiv{
+   display: flex;
+   gap: 10px;
+}
+
+.buttonsDiv button{
+   height: 20px;
+   width: 60px;
+}

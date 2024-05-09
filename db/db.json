@@ -76,42 +76,7 @@
     }
   ],
   "collect-points": [
-    {
-      "id": "4b33",
-      "name": "Itacorubi Point",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "2d70",
-      "name": "Eco Point Canasvieiras",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "b665",
-      "name": "Lagoa da Conceição Eco Point",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "06d7",
-      "name": "",
-      "email": "",
-      "placeName": "Ingleses",
-      "placeDescription": "Norte da Ilha-, ",
-      "creator": "8865",
-      "latitude": "-27.439688120754628",
-      "longitude": "-48.38831354460266",
-      "wasteTypes": "Paper",
-      "cep": "88058600",
-      "street": "Estrada Dom João Becker",
-      "number": "820",
-      "addressLine2": "",
-      "neighborhood": "Ingleses do Rio Vermelho",
-      "city": "Florianópolis",
-      "state": "SC"
-    },
+    
     {
       "placeName": "Everywhere",
       "placeDescription": "sdsd",
@@ -191,6 +156,42 @@
       "addressLine2": "",
       "neighborhood": "Centro",
       "city": "Campos dos Goytacazes",
+      "state": "RJ"
+    },
+    {
+      "id": "48ac",
+      "placeName": "Escola Municipal ",
+      "placeDescription": "Aquilino mota",
+      "creator": "11bf",
+      "latitude": "1111111111111111111",
+      "longitude": "2222222222222222222",
+      "wasteTypes": [
+        "Paper"
+      ],
+      "cep": "69301000",
+      "street": "Avenida Ville Roy",
+      "number": "22",
+      "addressLine2": "",
+      "neighborhood": "Centro",
+      "city": "Boa Vista",
+      "state": "RR"
+    },
+    {
+      "id": "a7f7",
+      "placeName": "Paróquia Nossa Senhora Aparecida",
+      "placeDescription": "Serviço de coleta de residyis",
+      "creator": "ab37",
+      "latitude": "2222222222222222222",
+      "longitude": "22222222222222",
+      "wasteTypes": [
+        "Glass"
+      ],
+      "cep": "26520331",
+      "street": "Estrada Mirandela",
+      "number": "341",
+      "addressLine2": "",
+      "neighborhood": "Centro",
+      "city": "Nilópolis",
       "state": "RJ"
     }
   ]

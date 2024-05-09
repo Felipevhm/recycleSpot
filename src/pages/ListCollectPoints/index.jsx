@@ -4,6 +4,7 @@ import { AppContext } from "../../context/AppContext";
 
 function ListCollectPoints() {
   const {
+    users,
     collectPoints, //collectPoints
     newCollectPoint, //newCollectPoint
     blankCollectPoint, //BlankCollectPoint
@@ -18,6 +19,7 @@ function ListCollectPoints() {
 
     clickedOnEdit,
     setClickedOnEdit,
+    findNameById
   } = useContext(AppContext);
 
   return (
@@ -25,10 +27,24 @@ function ListCollectPoints() {
       <h1>List of Collect Points</h1>
 
       <div className={styles.renderedList}>
-        {!!collectPoints &&
+      {!!collectPoints &&
           collectPoints.map((collectPoint, idx) => (
             <div key={idx} className={styles.collectPointCard}>
-              <h3 key={collectPoint.id}>{collectPoint.name}</h3>
+              <h3 key={collectPoint.id}>{collectPoint.placeName}</h3>
+              <h5 key={collectPoint.id}><b>Description:</b> {collectPoint.placeDescription}</h5>
+              <h4><b>Creator:</b> {findNameById(users,collectPoint.creator)}</h4>
+              <h4><b>Latitude:</b> {collectPoint.latitude}</h4>
+              <h4><b>Longitude:</b> {collectPoint.longitude}</h4>
+              <h4><b>Waste Types:</b> {collectPoint.wasteTypes.join(", ")}</h4>
+              <h4><b>CEP:</b> {collectPoint.cep}</h4>
+              <h4><b>Street:</b> {collectPoint.street}</h4>
+              <h4><b>Number:</b> {collectPoint.number}</h4>
+              <h4><b>Address Line 2:</b> {collectPoint.addressLine2}</h4>
+              <h4><b>Neighborhood:</b> {collectPoint.neighborhood}</h4>
+              <h4><b>City:</b> {collectPoint.city}</h4>
+              <h4><b>State:</b> {collectPoint.state}</h4>
+              
+              <div className={styles.buttonsDiv}>
               <button onClick={() => deleteCollectPoint(collectPoint.id)}>
                 Delete
               </button>
@@ -39,7 +55,7 @@ function ListCollectPoints() {
                 }}
               >
                 Edit
-              </button>
+              </button></div>
             </div>
           ))}
       </div>

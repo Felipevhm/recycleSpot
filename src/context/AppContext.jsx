@@ -35,6 +35,11 @@ export const AppContextProvider = ({ children }) => {
     }
   }
 
+  function findNameById(array, id) {
+    let object = array.find(item => item.id === id);
+    return object ? object.name : "--not found--";
+}
+
   function getusers() {
     fetch("http://localhost:3000/users")
       .then((response) => response.json())
@@ -313,6 +318,7 @@ export const AppContextProvider = ({ children }) => {
           setViewLogIn,
 
           handleClickUser,
+          findNameById
         }}
       >
         {children}
