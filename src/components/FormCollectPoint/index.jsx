@@ -83,12 +83,14 @@ function FormCollectPoint() {
 
   return (
     <div className={styles.main}>
-    <div className={styles.h1Wrapper}>
-      <h1> Register Collect Point</h1>
+      <div className={styles.h1Wrapper}>
+        <h1> Register Collect Point</h1>
       </div>
-      <form  onSubmit={handleSubmit(handleCreateCollectPoint)} style={{padding:'10px'}}>
+      <form
+        onSubmit={handleSubmit(handleCreateCollectPoint)}
+        style={{ padding: "10px" }}
+      >
         <div className={styles.userInteraction}>
-        
           <div className={styles.inputsDiv}>
             <div className={styles.placeInfo}>
               <input
@@ -97,6 +99,14 @@ function FormCollectPoint() {
                 placeholder="Place Name"
                 {...register("placeName", {
                   required: "Place Name field is required",
+                  minLength: {
+                    value: 11,
+                    message: "Please enter a valid place name",
+                  },
+                  maxLength: {
+                    value: 120,
+                    message: "Place name must have less than 120 characters",
+                  },
                 })}
               />
 
@@ -107,6 +117,10 @@ function FormCollectPoint() {
                 placeholder="Place Description"
                 {...register("placeDescription", {
                   required: "Place Description field is required",
+                  maxLength: {
+                    value: 500,
+                    message: "Description must have less then 500 characters.",
+                  },
                 })}
               />
 
@@ -130,6 +144,14 @@ function FormCollectPoint() {
                 placeholder="Latitude"
                 {...register("latitude", {
                   required: "Latitude field is required",
+                  minLength: {
+                    value: 12,
+                    message: "Latitude must have at least 12 characters",
+                  },
+                  maxLength: {
+                    value: 20,
+                    message: "Latitude must have a maximum of 20 characters",
+                  },
                 })}
               />
               <input
@@ -138,65 +160,81 @@ function FormCollectPoint() {
                 placeholder="Longitude"
                 {...register("longitude", {
                   required: "Longitude field is required",
+                  minLength: {
+                    value: 12,
+                    message: "Longitude must have at least 12 characters",
+                  },
+                  maxLength: {
+                    value: 20,
+                    message: "Longitude must have a maximum of 20 characters",
+                  },
                 })}
               />
 
-  
+              <div className={styles.addressGroup}>
+                <input
+                  type="text"
+                  name="cep"
+                  {...register("cep", {
+                    required: "CEP field is required",
+                    onBlur: () => findCep(),
+                    minLength: {
+                      value: 8,
+                      message: "CEP must have 08 characters.",
+                    },
+                    maxLength: {
+                      value: 8,
+                      message: "CEP must have 08 characters.",
+                    },
+                  })}
+                  placeholder="CEP"
+                />
 
-             <div className={styles.addressGroup}>
-              <input
-                type="text"
-                name="cep"
-                {...register("cep", {
-                  required: "CEP field is required",
-                  onBlur: () => findCep(),
-                })}
-                placeholder="CEP"
-              />
-
-              <input
-                type="text"
-                name="street"
-                placeholder="Street Name"
-                {...register("street")}
-              />
-              <input
-                type="text"
-                name="number"
-                placeholder="Number"
-                {...register("number", {
-                  required: "Number field is required",
-                })}
-              />
-              <input
-                type="text"
-                name="addressLine2"
-                placeholder="Address Line 2"
-                {...register("addressLine2")}
-              />
-              <input
-                type="text"
-                name="neighborhood"
-                placeholder="Neighborhood"
-                {...register("neighborhood")}
-              />
-              <input
-                type="text"
-                name="city"
-                placeholder="City"
-                {...register("city")}
-              />
-              <input
-                type="text"
-                name="state"
-                placeholder="State"
-                {...register("state")}
-              />
+                <input
+                  type="text"
+                  name="street"
+                  placeholder="Street Name"
+                  {...register("street")}
+                />
+                <input
+                  type="number"
+                  name="number"
+                  placeholder="Number"
+                  {...register("number", {
+                    required: "Number field is required",
+                    max: {
+                      value: 99999,
+                      message: "Enter a valid number.",
+                    },
+                  })}
+                />
+                <input
+                  type="text"
+                  name="addressLine2"
+                  placeholder="Address Line 2"
+                  {...register("addressLine2")}
+                />
+                <input
+                  type="text"
+                  name="neighborhood"
+                  placeholder="Neighborhood"
+                  {...register("neighborhood")}
+                />
+                <input
+                  type="text"
+                  name="city"
+                  placeholder="City"
+                  {...register("city")}
+                />
+                <input
+                  type="text"
+                  name="state"
+                  placeholder="State"
+                  {...register("state")}
+                />
+              </div>
             </div>
-    
-
-            </div> 
-             <div className={styles.checkBoxField} >
+            <div className={styles.checkBoxField}>
               <h2>Waste Types</h2>
               {wasteTypes.map((type, index) => (
                 <div key={index} className={styles.checkBoxWrapper}>
@@ -204,20 +242,19 @@ function FormCollectPoint() {
                     type="checkbox"
                     id={type}
                     value={type}
-                    {...register("wasteTypes")}
+                    {...register("wasteTypes", {
+                      required: "Please select at least one waste type",
+                    })}
                   />
                   <label htmlFor={type}>{type}</label>
                 </div>
               ))}
             </div>
             <button style={{ height: "50px", width: "100px" }} type="submit">
-            Register Point
-          </button>
+              Register Point
+            </button>
             {/* -------------------------------------- */}
-           
-           
           </div>
-         
         </div>
         <div className={styles.errorsDiv}>
           {errors.placeName && <p>{errors.placeName.message}</p>}

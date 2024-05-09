@@ -63,13 +63,22 @@ function FormUser() {
       <form action="" onSubmit={handleSubmit(handleCreateUser)}>
         <div className={styles.userInteraction}>
           <div className={styles.inputsDiv}>
-
             <div className={styles.personalInfo}>
               <input
                 type="text"
                 name="name"
                 placeholder="name"
-                {...register("name", { required: "Name field is required" })}
+                {...register("name", {
+                  required: "Name field is required",
+                  minLength: {
+                    value: 2,
+                    message: "Insert a valid name ",
+                  },
+                  maxLength: {
+                    value: 120,
+                    message: "Maximum of 120 caracteres",
+                  },
+                })}
               />
 
               <input
@@ -102,7 +111,17 @@ function FormUser() {
                 type="text"
                 name="cpf"
                 placeholder="CPF"
-                {...register("cpf", { required: "CPF field is required" })}
+                {...register("cpf", {
+                  required: "CPF field is required",
+                  minLength: {
+                    value: 11,
+                    message: "CPF must have 11 characters.",
+                  },
+                  maxLength: {
+                    value: 11,
+                    message: "CPF must have 11 characters.",
+                  },
+                })}
               />
 
               <input
@@ -120,6 +139,14 @@ function FormUser() {
                 {...register("cep", {
                   required: "CEP field is required",
                   onBlur: () => findCep(),
+                  minLength: {
+                    value: 8,
+                    message: "CEP must have 08 characters.",
+                  },
+                  maxLength: {
+                    value: 8,
+                    message: "CEP must have 08 characters.",
+                  },
                 })}
                 placeholder="CEP"
               />
@@ -131,11 +158,15 @@ function FormUser() {
                 {...register("street")}
               />
               <input
-                type="text"
+                type="number"
                 name="number"
                 placeholder="Number"
                 {...register("number", {
                   required: "Number field is required",
+                  max: {
+                    value: 99999,
+                    message: "Enter a valid number.",
+                  },
                 })}
               />
               <input
@@ -163,7 +194,6 @@ function FormUser() {
                 {...register("state")}
               />
             </div>
-            
           </div>
           <button style={{ height: "50px", width: "100px" }} type="submit">
             Register user
