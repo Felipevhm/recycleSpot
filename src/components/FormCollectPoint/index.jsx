@@ -100,7 +100,7 @@ function FormCollectPoint() {
                 {...register("placeName", {
                   required: "Place Name field is required",
                   minLength: {
-                    value: 11,
+                    value: 2,
                     message: "Please enter a valid place name",
                   },
                   maxLength: {
