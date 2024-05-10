@@ -53,7 +53,7 @@
       "cpf": "40009167935",
       "gender": "F",
       "email": "a@a.com",
-      "password": "WUbXE5kx5O",
+      "password": "a",
       "cep": "88040210",
       "street": "Rua Heraldo Dias",
       "number": 110,
@@ -115,7 +115,7 @@
       "wasteTypes": [
         "Metal",
         "Paper",
-        "Plastic",
+        "Plastic"
       ],
       "cep": "88032088",
       "street": "Servidão Juvenal dos Santos",
@@ -136,7 +136,7 @@
       "wasteTypes": [
         "Paper",
         "Plastic",
-        "Organic",
+        "Organic"
       ],
       "cep": "88056435",
       "street": "Rua Olegário Pereira",

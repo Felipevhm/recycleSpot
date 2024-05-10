@@ -29,23 +29,23 @@ function FormUser() {
     setValue,
     getValues,
     formState: { errors },
+    reset,
   } = useForm({
     defaultValues: {
-    name: "",
-    email: "",
-    password: "",
-    gender: "",
-    cpf: "",
-    birth: "",
-    cep: "",
-    street: "",
-    number: "",
-    addressLine2: "",
-    neighborhood: "",
-    city: "",
-    state: "",
-}
-,
+      name: "",
+      email: "",
+      password: "",
+      gender: "",
+      cpf: "",
+      birth: "",
+      cep: "",
+      street: "",
+      number: "",
+      addressLine2: "",
+      neighborhood: "",
+      city: "",
+      state: "",
+    },
   });
 
   const handleCreateUser = async (data) => {
@@ -70,9 +70,9 @@ function FormUser() {
   };
   return (
     <div className={styles.main}>
-    <div className={styles.infoAssets}>
-      <img width={150} height={150} src="/logo.png" alt="" />
-      <h1> Register User</h1>
+      <div className={styles.infoAssets}>
+        <img width={150} height={150} src="/logo.png" alt="" />
+        <h1> Register User</h1>
       </div>
       <form action="" onSubmit={handleSubmit(handleCreateUser)}>
         <div className={styles.userInteraction}>
@@ -230,12 +230,25 @@ function FormUser() {
           {errors.state && <p>{errors.state.message}</p>}
         </div>
       </form>
-      <button
-        style={{ height: "25px", width: "100px" }}
-        onClick={handleClickUser(viewRegister, setViewRegister)}
-      >
-        Go back
-      </button>
+
+      <div className={styles.userRegisterButtons}>
+        <button
+          style={{ height: "25px", width: "100px" }}
+          onClick={() => {
+            getusers();
+            reset();
+          }}
+        >
+          Refresh
+        </button>
+
+        <button
+          style={{ height: "25px", width: "100px" }}
+          onClick={handleClickUser(viewRegister, setViewRegister)}
+        >
+          Go back
+        </button>
+      </div>
     </div>
   );
 }
