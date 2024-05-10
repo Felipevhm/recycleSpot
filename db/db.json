@@ -59,20 +59,36 @@
       "id": "e5d7"
     },
     {
-      "id": "8865",
-      "name": "Mario",
-      "email": "k@a.com",
-      "password": "a",
+      "name": "Reinaldo",
+      "email": "pa@pa.com",
+      "password": "pa",
       "gender": "M",
-      "cpf": "445",
-      "birth": "2024-05-14",
-      "cep": "88036002",
-      "street": "Rua Lauro Linhares",
+      "cpf": "44549374593",
+      "birth": "2024-06-04",
+      "cep": "68371057",
+      "street": "Rua Magalhães Barata",
       "number": "2",
-      "addressLine2": "11",
-      "neighborhood": "Trindade",
-      "city": "Florianópolis",
-      "state": "SC"
+      "addressLine2": "",
+      "neighborhood": "Centro",
+      "city": "Altamira",
+      "state": "PA",
+      "id": "8865"
+    },
+    {
+      "id": "fc3f",
+      "name": "sdsdsd",
+      "email": "dsdsd@assa.com",
+      "password": "a",
+      "gender": "F",
+      "cpf": "44549374593",
+      "birth": "2024-05-29",
+      "cep": "75503410",
+      "street": "Avenida Brasília",
+      "number": "2",
+      "addressLine2": "",
+      "neighborhood": "Centro",
+      "city": "Itumbiara",
+      "state": "GO"
     }
   ],
   "collect-points": [

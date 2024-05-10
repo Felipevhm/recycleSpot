@@ -119,7 +119,7 @@ function FormCollectPoint() {
   return (
     <div className={styles.main}>
       <div className={styles.h1Wrapper}>
-        <h1> Register Collect Point |  {String(clickedOnEdit.isEdit)} {String(clickedOnEdit.editId)}</h1>
+        <h1> Register Collect Point</h1>
       </div>
       <form
         onSubmit={handleSubmit(handleCreateCollectPoint)}
@@ -285,6 +285,7 @@ function FormCollectPoint() {
                 </div>
               ))}
             </div>
+            <div className={styles.buttonsDiv} >
             <button style={{ height: "50px", width: "100px" }} type="submit">
               Register Point
             </button>
@@ -299,6 +300,7 @@ function FormCollectPoint() {
         >
           Refresh
         </button>
+        </div>
             {/* -------------------------------------- */}
           </div>
         </div>

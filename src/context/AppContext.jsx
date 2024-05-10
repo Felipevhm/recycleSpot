@@ -35,6 +35,15 @@ export const AppContextProvider = ({ children }) => {
     }
   }
 
+  function CPFExists(arrayOfObjects, cpf) {
+    const foundElement = arrayOfObjects.find((user) => user.cpf === cpf);
+    if (foundElement) {
+      return { result: true, foundElement: foundElement };
+    } else {
+      return { result: false, foundElement: null };
+    }
+  }
+
 
   function findNameById(array, id) {
     let object = array.find(item => item.id === id);
@@ -66,16 +75,17 @@ export const AppContextProvider = ({ children }) => {
   }
 
   function registerUser(user) {
-    const searchResult = nameExists(users, user.name);
+   // const searchResult = nameExists(users, user.name);
+    const searchResult = CPFExists(users,user.cpf)
 
-    if (user.name == "") {
-      alert("❌ User field needs a name!");
+    if (user.cpf == "") {
+      alert("❌ User field needs a CPF!");
     }
     if (searchResult.result) {
-      alert("✅ Name registered and will be updated!");
+      alert("✅ CPF registered and will be updated!");
       updateUser(user, searchResult.foundElement.id);
     } else {
-      alert("💡 Name not used yet!");
+      alert("💡 CPF not used yet!");
 
       setUsers([...users, user]);
       fetch("http://localhost:3000/users", {
