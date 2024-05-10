@@ -89,3 +89,9 @@ button{
    margin-right: 100px;
 }
 
+.userRegisterButtons{
+
+   display: flex;
+   flex-direction: column;
+   gap: 45px;
+}
