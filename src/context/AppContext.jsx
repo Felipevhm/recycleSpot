@@ -82,7 +82,7 @@ export const AppContextProvider = ({ children }) => {
       alert("❌ User field needs a CPF!");
     }
     if (searchResult.result) {
-      alert("✅ CPF registered and will be updated!");
+      alert("✅ CPF was already registered and will be updated with the new typed data!");
       updateUser(user, searchResult.foundElement.id);
     } else {
       alert("💡 CPF not used yet!");
