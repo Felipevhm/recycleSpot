@@ -35,10 +35,18 @@ export const AppContextProvider = ({ children }) => {
     }
   }
 
+
   function findNameById(array, id) {
     let object = array.find(item => item.id === id);
     return object ? object.name : "--not found--";
-}
+  }
+  function findCollectPointById(array, id) {
+    let object = array.find(item => item.id === id);
+    console.log("object IS:")
+    console.log(object)
+    return  object
+  }
+
 
   function getusers() {
     fetch("http://localhost:3000/users")
@@ -318,7 +326,8 @@ export const AppContextProvider = ({ children }) => {
           setViewLogIn,
 
           handleClickUser,
-          findNameById
+          findNameById,
+          findCollectPointById
         }}
       >
         {children}

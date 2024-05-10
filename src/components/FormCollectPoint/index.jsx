@@ -4,8 +4,10 @@ import { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 
 function FormCollectPoint() {
+  
   const {
     users,
+    collectPoints,
     newCollectPoint,
     blankCollectPoint,
     nameExists,
@@ -20,6 +22,10 @@ function FormCollectPoint() {
     setViewRegister,
     viewLogIn,
     setViewLogIn,
+
+    clickedOnEdit,
+    setClickedOnEdit,
+    findCollectPointById
   } = useContext(AppContext);
 
   const {
@@ -46,6 +52,35 @@ function FormCollectPoint() {
       state: "",
     },
   });
+
+
+
+  if(clickedOnEdit.isEdit){
+ const loadCollectPoint = findCollectPointById(collectPoints,clickedOnEdit.editId)
+ console.log("loadCollectPoint IS:")
+ console.log(loadCollectPoint)
+
+    setValue("placeName",loadCollectPoint.placeName)
+
+    setValue("placeDescription", loadCollectPoint.placeDescription);
+    setValue("creator", loadCollectPoint.creator);
+    setValue("latitude", loadCollectPoint.latitude);
+    setValue("longitude", loadCollectPoint.longitude);
+    setValue("cep", loadCollectPoint.cep);
+    setValue("number", loadCollectPoint.number);
+    setValue("wasteTypes", loadCollectPoint.wasteTypes);
+    setValue("neighborhood", loadCollectPoint.neighborhood);
+    setValue("street", loadCollectPoint.street);
+    setValue("state", loadCollectPoint.state);
+    setValue("city", loadCollectPoint.city);
+
+    // setClickedOnEdit({ isEdit: false, editId:""});
+
+
+    // -----------------------------------
+
+  }
+
 
   const handleCreateCollectPoint = async (data) => {
     registerCollectPoint(data);
@@ -84,7 +119,7 @@ function FormCollectPoint() {
   return (
     <div className={styles.main}>
       <div className={styles.h1Wrapper}>
-        <h1> Register Collect Point</h1>
+        <h1> Register Collect Point |  {String(clickedOnEdit.isEdit)} {String(clickedOnEdit.editId)}</h1>
       </div>
       <form
         onSubmit={handleSubmit(handleCreateCollectPoint)}
@@ -144,14 +179,14 @@ function FormCollectPoint() {
                 placeholder="Latitude"
                 {...register("latitude", {
                   required: "Latitude field is required",
-                  minLength: {
-                    value: 12,
-                    message: "Latitude must have at least 12 characters",
-                  },
-                  maxLength: {
-                    value: 20,
-                    message: "Latitude must have a maximum of 20 characters",
-                  },
+                  // minLength: {
+                  //   value: 12,
+                  //   message: "Latitude must have at least 12 characters",
+                  // },
+                  // maxLength: {
+                  //   value: 20,
+                  //   message: "Latitude must have a maximum of 20 characters",
+                  // },
                 })}
               />
               <input
@@ -160,14 +195,14 @@ function FormCollectPoint() {
                 placeholder="Longitude"
                 {...register("longitude", {
                   required: "Longitude field is required",
-                  minLength: {
-                    value: 12,
-                    message: "Longitude must have at least 12 characters",
-                  },
-                  maxLength: {
-                    value: 20,
-                    message: "Longitude must have a maximum of 20 characters",
-                  },
+                  // minLength: {
+                  //   value: 12,
+                  //   message: "Longitude must have at least 12 characters",
+                  // },
+                  // maxLength: {
+                  //   value: 20,
+                  //   message: "Longitude must have a maximum of 20 characters",
+                  // },
                 })}
               />
 
@@ -253,6 +288,17 @@ function FormCollectPoint() {
             <button style={{ height: "50px", width: "100px" }} type="submit">
               Register Point
             </button>
+
+            <button  style={{ height: "50px", width: "100px" }}
+          onClick={() => {
+            getCollectPoints();
+            setClickedOnEdit({ isEdit: false, editId:""});
+            reset();
+            
+          }}
+        >
+          Refresh
+        </button>
             {/* -------------------------------------- */}
           </div>
         </div>
