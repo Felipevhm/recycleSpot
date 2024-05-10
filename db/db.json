@@ -1,213 +1,287 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "Jorge",
-      "email": "a@e.com",
-      "password": "1"
-    },
-    {
-      "name": "clara",
-      "email": "nova@a.com",
-      "password": "2",
-      "id": "3"
-    },
-    {
-      "name": "evaldo",
-      "email": "evaldonew@email.com",
-      "password": "e",
-      "id": "5"
-    },
-    {
-      "name": "Maria",
-      "email": "a@a.com",
-      "password": "s",
-      "id": "0b5a"
-    },
-    {
-      "id": "11bf",
-      "name": "fabrício",
-      "email": "f@a.com",
-      "password": "a"
-    },
-    {
-      "id": "ab37",
-      "name": "Julia",
-      "email": "j@a.com",
-      "password": "j"
-    },
-    {
-      "id": "46c0",
-      "name": "Neide",
-      "email": "n@n.com",
-      "password": "5"
-    },
-    {
-      "name": "Felipe",
-      "email": "e@e.com",
-      "password": "1",
+      "name": "Marcos Vinicius Antonio Tiago Rezende",
+      "cpf": "10582373905",
       "gender": "M",
-      "cpf": "1",
-      "birth": "2024-05-20",
-      "cep": "28010400",
-      "street": "Rua Gilberto Siqueira",
-      "number": "101",
-      "addressLine2": "",
-      "neighborhood": "Centro",
-      "city": "Campos dos Goytacazes",
-      "state": "RJ",
-      "id": "e5d7"
+      "email": "marcosrezende98@iesa.com.br",
+      "password": "7rg52fpYoJ",
+      "cep": "88060308",
+      "street": "Servidão Redusino da Silveira",
+      "number": 669,
+      "neighborhood": "São João do Rio Vermelho",
+      "city": "Florianópolis",
+      "state": "SC",
+      "id": "hweu",
+      "birth": "19800529",
+      "addressLine2": ""
     },
     {
-      "name": "Reinaldo",
-      "email": "pa@pa.com",
-      "password": "pa",
-      "gender": "M",
-      "cpf": "44549374593",
-      "birth": "2024-06-04",
-      "cep": "68371057",
-      "street": "Rua Magalhães Barata",
-      "number": "2",
-      "addressLine2": "",
-      "neighborhood": "Centro",
-      "city": "Altamira",
-      "state": "PA",
-      "id": "8865"
-    },
-    {
-      "id": "fc3f",
-      "name": "sdsdsd",
-      "email": "dsdsd@assa.com",
-      "password": "a",
+      "name": "Cláudia Nair Antonella da Cunha",
+      "cpf": "63350179975",
       "gender": "F",
-      "cpf": "44549374593",
-      "birth": "2024-05-29",
-      "cep": "75503410",
-      "street": "Avenida Brasília",
-      "number": "2",
-      "addressLine2": "",
-      "neighborhood": "Centro",
-      "city": "Itumbiara",
-      "state": "GO"
+      "email": "claudia_dacunha@gasparalmeida.com",
+      "password": "OaxMA54LXS",
+      "cep": "88058775",
+      "street": "Servidão Leão Marinho",
+      "number": 644,
+      "neighborhood": "Ingleses do Rio Vermelho",
+      "city": "Florianópolis",
+      "state": "SC",
+      "id": "hjdhfhd",
+      "birth": "19800529",
+      "addressLine2": ""
+    },
+    {
+      "name": "Ester Cecília Porto",
+      "cpf": "55884689969",
+      "gender": "F",
+      "email": "ester.cecilia.porto@greenschool.com.br",
+      "password": "KcCb2oBppT",
+      "cep": "88063281",
+      "street": "Rua Marino Ademar Schweitzer",
+      "number": 712,
+      "neighborhood": "Campeche",
+      "city": "Florianópolis",
+      "state": "SC",
+      "id": "jdshds",
+      "birth": "19800529",
+      "addressLine2": ""
+    },
+    {
+      "name": "Amélia Cristiane Analu Silva",
+      "cpf": "40009167935",
+      "gender": "F",
+      "email": "a@a.com",
+      "password": "WUbXE5kx5O",
+      "cep": "88040210",
+      "street": "Rua Heraldo Dias",
+      "number": 110,
+      "neighborhood": "Pantanal",
+      "city": "Florianópolis",
+      "state": "SC",
+      "id": "kklfs",
+      "birth": "19800529",
+      "addressLine2": ""
+    },
+    {
+      "name": "Emilly Luzia Silvana Monteiro",
+      "cpf": "83154248900",
+      "gender": "F",
+      "email": "emilly_monteiro@bn.com.br",
+      "password": "3CHipxgAmP",
+      "cep": "88052619",
+      "street": "Servidão das Flores",
+      "number": 686,
+      "neighborhood": "Vargem Grande",
+      "city": "Florianópolis",
+      "state": "SC",
+      "id": "aattw",
+      "birth": "19800529",
+      "addressLine2": ""
     }
   ],
   "collect-points": [
     {
-      "placeName": "Everywhere",
-      "placeDescription": "sdsd",
-      "creator": "3",
-      "latitude": "1122",
-      "longitude": "13131",
-      "wasteTypes": [
-        "on",
-        "on",
-        "on",
-        "on"
-      ],
-      "cep": "49000188",
-      "street": "Rua César Macieira",
-      "number": "2",
-      "addressLine2": "",
-      "neighborhood": "Aruana",
-      "city": "Aracaju",
-      "state": "SE",
-      "id": "2f15"
-    },
-    {
-      "id": "5a26",
-      "placeName": "Guariuna",
-      "placeDescription": "aaa",
-      "creator": "5",
-      "latitude": "2",
-      "longitude": "3",
-      "wasteTypes": [
-        "Glass",
-        "Metal",
-        "Organic"
-      ],
-      "cep": "58411370",
-      "street": "Avenida Aeroclube",
-      "number": "2",
-      "addressLine2": "",
-      "neighborhood": "Distrito Industrial",
-      "city": "Campina Grande",
-      "state": "PB"
-    },
-    {
-      "id": "2468",
-      "placeName": "Jardim São Benedito",
-      "placeDescription": "s",
-      "creator": "46c0",
-      "latitude": "434",
-      "longitude": "43434",
-      "wasteTypes": [
-        "Metal",
-        "Organic",
-        "Batteries"
-      ],
-      "cep": "28010400",
-      "street": "Rua Gilberto Siqueira",
-      "number": "543",
-      "addressLine2": "",
-      "neighborhood": "Centro",
-      "city": "Campos dos Goytacazes",
-      "state": "RJ"
-    },
-    {
-      "id": "48ac",
-      "placeName": "Escola Municipal ",
-      "placeDescription": "Aquilino mota",
-      "creator": "11bf",
-      "latitude": "1111111111111111111",
-      "longitude": "2222222222222222222",
-      "wasteTypes": [
-        "Paper"
-      ],
-      "cep": "69301000",
-      "street": "Avenida Ville Roy",
-      "number": "22",
-      "addressLine2": "",
-      "neighborhood": "Centro",
-      "city": "Boa Vista",
-      "state": "RR"
-    },
-    {
-      "id": "a7f7",
-      "placeName": "Paróquia Nossa Senhora Aparecida",
-      "placeDescription": "Serviço de coleta de residyis",
-      "creator": "ab37",
-      "latitude": "2222222222222222222",
-      "longitude": "22222222222222",
-      "wasteTypes": [
-        "Glass"
-      ],
-      "cep": "26520331",
-      "street": "Estrada Mirandela",
-      "number": "341",
-      "addressLine2": "",
-      "neighborhood": "Centro",
-      "city": "Nilópolis",
-      "state": "RJ"
-    },
-    {
-      "id": "b0a7",
-      "placeName": "Maricá casa",
-      "placeDescription": "aaa",
-      "creator": "ab37",
-      "latitude": "2",
-      "longitude": "3",
+      "id": "afdf",
+
+      "placeName": "Recicla Campeche",
+      "placeDescription": "Um local de coleta de resíduos recicláveis no coração do Campeche.",
+      "creator": "aattw",
+      "latitude": "-27.59622988072349",
+      "longitude": "-48.54947346505936",
       "wasteTypes": [
         "Paper",
         "Plastic",
+        "Organic",
         "Batteries"
       ],
-      "cep": "24900835",
-      "street": "Rua Gabriel Henrique de Farias Júnior",
-      "number": "4",
+      "cep": "88063055",
+      "street": "Servidão SAC",
+      "number": 437,
+      "addressLine2": "",
+      "neighborhood": "Campeche",
+      "city": "Florianópolis",
+      "state": "SC"
+    },
+    {
+      "id": "vkd",
+
+      "placeName": "Eco Saco Grande",
+      "placeDescription": "Um ponto de coleta de resíduos recicláveis no Saco Grande.",
+      "creator": "aattw",
+      "latitude": "-27.59622988072349",
+      "longitude": "-48.54947346505936",
+      "wasteTypes": [
+        "Metal",
+        "Paper",
+        "Plastic",
+      ],
+      "cep": "88032088",
+      "street": "Servidão Juvenal dos Santos",
+      "number": 525,
+      "addressLine2": "",
+      "neighborhood": "Saco Grande",
+      "city": "Florianópolis",
+      "state": "SC"
+    },
+    {
+      "id": "kklsfd",
+
+      "placeName": "Cachoeira Limpa",
+      "placeDescription": "Um ponto de coleta de resíduos recicláveis na Cachoeira do Bom Jesus.",
+      "creator": "kklfs",
+      "latitude": "-27.59622988072349",
+      "longitude": "-48.54947346505936",
+      "wasteTypes": [
+        "Paper",
+        "Plastic",
+        "Organic",
+      ],
+      "cep": "88056435",
+      "street": "Rua Olegário Pereira",
+      "number": 764,
+      "addressLine2": "",
+      "neighborhood": "Cachoeira do Bom Jesus",
+      "city": "Florianópolis",
+      "state": "SC"
+    },
+    {
+      "id": "ppod",
+
+      "placeName": "Centro Recicla",
+      "placeDescription": "Um local de coleta de resíduos recicláveis no centro da cidade.",
+      "creator": "jdshds",
+      "latitude": "-27.59622988072349",
+      "longitude": "-48.54947346505936",
+      "wasteTypes": [
+        "Glass",
+        "Metal",
+        "Paper",
+        "Plastic",
+        "Organic",
+        "Batteries"
+      ],
+      "cep": "88010405",
+      "street": "Praça Fernando Machado",
+      "number": 582,
       "addressLine2": "",
       "neighborhood": "Centro",
-      "city": "Maricá",
-      "state": "RJ"
+      "city": "Florianópolis",
+      "state": "SC"
+    },
+    {
+      "id": "wuif",
+
+      "placeName": "Capoeiras Eco Ponto",
+      "placeDescription": "Um ponto de coleta de resíduos recicláveis em Capoeiras.",
+      "creator": "hweu",
+      "latitude": "-27.59622988072349",
+      "longitude": "-48.54947346505936",
+      "wasteTypes": [
+        "Glass",
+        "Paper",
+        "Batteries"
+      ],
+      "cep": "88090740",
+      "street": "Rua Humberto de Freitas Tibau",
+      "number": 710,
+      "addressLine2": "",
+      "neighborhood": "Capoeiras",
+      "city": "Florianópolis",
+      "state": "SC"
     }
+
+
+
+
+
+
+
+
+,
+
+    
+ {
+        "id": "abc123",
+        "placeName": "Recicla Bom Jesus",
+        "placeDescription": "Um  novolocal de coleta de resíduos recicláveis no coração da Cachoeira do Bom Jesus.",
+        "creator": "aattw",
+        "latitude": "-27.59622988072349",
+        "longitude": "-48.54947346505936",
+        "wasteTypes": ["Glass", "Metal", "Paper"],
+        "cep": "88056364",
+        "street": "Rua da Sibipiruna",
+        "number": 389,
+        "addressLine2": "",
+        "neighborhood": "Cachoeira do Bom Jesus",
+        "city": "Florianópolis",
+        "state": "SC"
+    },
+    {
+        "id": "def456",
+        "placeName": "Eco Jurerê",
+        "placeDescription": "Um ponto de coleta de resíduos recicláveis em Jurerê.",
+        "creator": "aattw",
+        "latitude": "-27.59622988072349",
+        "longitude": "-48.54947346505936",
+        "wasteTypes": ["Plastic", "Organic", "Batteries"],
+        "cep": "88053518",
+        "street": "Rua das Pirapitingas",
+        "number": 371,
+        "addressLine2": "",
+        "neighborhood": "Jurerê",
+        "city": "Florianópolis",
+        "state": "SC"
+    },
+    {
+        "id": "ghi789",
+        "placeName": "Monte Cristo Limpa",
+        "placeDescription": "Um ponto de coleta de resíduos recicláveis no Monte Cristo.",
+        "creator": "kklfs",
+        "latitude": "-27.59622988072349",
+        "longitude": "-48.54947346505936",
+        "wasteTypes": ["Glass", "Metal", "Organic"],
+        "cep": "88090561",
+        "street": "Servidão 1º de Maio",
+        "number": 435,
+        "addressLine2": "",
+        "neighborhood": "Monte Cristo",
+        "city": "Florianópolis",
+        "state": "SC"
+    },
+    {
+        "id": "jkl012",
+        "placeName": "Pântano Recicla",
+        "placeDescription": "Mais tradicional local de coleta de resíduos recicláveis no Pântano do Sul.",
+        "creator": "jdshds",
+        "latitude": "-27.59622988072349",
+        "longitude": "-48.54947346505936",
+        "wasteTypes": ["Paper", "Plastic", "Batteries"],
+        "cep": "88067595",
+        "street": "Servidão Niberto Borges",
+        "number": 938,
+        "addressLine2": "",
+        "neighborhood": "Pântano do Sul",
+        "city": "Florianópolis",
+        "state": "SC"
+    },
+    {
+        "id": "mno345",
+        "placeName": "Armação do Pântano Eco Ponto",
+        "placeDescription": "Outro ponto de coleta de resíduos recicláveis na Armação do Pântano do Sul.",
+        "creator": "hweu",
+        "latitude": "-27.59622988072349",
+        "longitude": "-48.54947346505936",
+        "wasteTypes": ["Metal", "Organic", "Batteries"],
+        "cep": "88066545",
+        "street": "Servidão Martins",
+        "number": 421,
+        "addressLine2": "",
+        "neighborhood": "Armação do Pântano do Sul",
+        "city": "Florianópolis",
+        "state": "SC"
+    }
+    
   ]
 }
