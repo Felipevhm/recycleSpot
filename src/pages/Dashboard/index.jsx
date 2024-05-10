@@ -41,7 +41,7 @@ function Dashboard() {
           collectPoints.map((collectPoint, idx) => (
             <div key={idx} className={styles.collectPointCard}>
               <h2 key={collectPoint.id}>{collectPoint.placeName}</h2>
-              <h5 key={collectPoint.id}><b>Description:</b> {collectPoint.placeDescription}</h5>
+              <h5 key={collectPoint.id + "_new"}><b>Description:</b> {collectPoint.placeDescription}</h5>
               <h4><b>Creator:</b> {findNameById(users,collectPoint.creator)}</h4>
               <h4><b>Latitude:</b> {collectPoint.latitude}</h4>
               <h4><b>Longitude:</b> {collectPoint.longitude}</h4>
