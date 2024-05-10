@@ -13,9 +13,11 @@ The application was created to facilitate the management of recycling collection
 
 ## Techniques and Technologies Used
 
-- React: A JavaScript library for building user interfaces
-- JSON Server: Used to simulate a RESTful API
-- Private Routes: To protect routes and ensure that only authenticated users can access them
+- React: A JavaScript library for building user interfaces;
+- JSON Server: Used to simulate a RESTful API;
+- Private Routes: To protect routes and ensure that only authenticated users can access them;
+- React Router DOM: Used to create routes for application pages;
+- React Hook Form: Used to create forms for application user register and collect point register.
 
 ## How to Run
 
