@@ -5,21 +5,10 @@ import { AppContext } from "../../context/AppContext";
 
 function FormUser() {
   const {
-    newUser,
-    blankUser,
-    nameExists,
-    logInUser,
-    setNewUser,
     registerUser,
-    updateUser,
-    deleteUser,
     getusers,
-    getuserById,
     viewRegister,
     setViewRegister,
-    viewLogIn,
-    setViewLogIn,
-
     handleClickUser,
   } = useContext(AppContext);
 
@@ -50,7 +39,6 @@ function FormUser() {
 
   const handleCreateUser = async (data) => {
     registerUser(data);
-    //console.log(data);
   };
 
   const findCep = () => {

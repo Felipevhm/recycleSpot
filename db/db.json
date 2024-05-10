@@ -90,12 +90,7 @@
       "creator": "aattw",
       "latitude": "-27.59622988072349",
       "longitude": "-48.54947346505936",
-      "wasteTypes": [
-        "Paper",
-        "Plastic",
-        "Organic",
-        "Batteries"
-      ],
+      "wasteTypes": ["Paper", "Plastic", "Organic", "Batteries"],
       "cep": "88063055",
       "street": "Servidão SAC",
       "number": 437,
@@ -112,11 +107,7 @@
       "creator": "aattw",
       "latitude": "-27.59622988072349",
       "longitude": "-48.54947346505936",
-      "wasteTypes": [
-        "Metal",
-        "Paper",
-        "Plastic"
-      ],
+      "wasteTypes": ["Metal", "Paper", "Plastic"],
       "cep": "88032088",
       "street": "Servidão Juvenal dos Santos",
       "number": 525,
@@ -133,11 +124,7 @@
       "creator": "kklfs",
       "latitude": "-27.59622988072349",
       "longitude": "-48.54947346505936",
-      "wasteTypes": [
-        "Paper",
-        "Plastic",
-        "Organic"
-      ],
+      "wasteTypes": ["Paper", "Plastic", "Organic"],
       "cep": "88056435",
       "street": "Rua Olegário Pereira",
       "number": 764,
@@ -178,11 +165,7 @@
       "creator": "hweu",
       "latitude": "-27.59622988072349",
       "longitude": "-48.54947346505936",
-      "wasteTypes": [
-        "Glass",
-        "Paper",
-        "Batteries"
-      ],
+      "wasteTypes": ["Glass", "Paper", "Batteries"],
       "cep": "88090740",
       "street": "Rua Humberto de Freitas Tibau",
       "number": 710,
@@ -190,98 +173,87 @@
       "neighborhood": "Capoeiras",
       "city": "Florianópolis",
       "state": "SC"
+    },
+
+    {
+      "id": "abc123",
+      "placeName": "Recicla Bom Jesus",
+      "placeDescription": "Um  novolocal de coleta de resíduos recicláveis no coração da Cachoeira do Bom Jesus.",
+      "creator": "aattw",
+      "latitude": "-27.59622988072349",
+      "longitude": "-48.54947346505936",
+      "wasteTypes": ["Glass", "Metal", "Paper"],
+      "cep": "88056364",
+      "street": "Rua da Sibipiruna",
+      "number": 389,
+      "addressLine2": "",
+      "neighborhood": "Cachoeira do Bom Jesus",
+      "city": "Florianópolis",
+      "state": "SC"
+    },
+    {
+      "id": "def456",
+      "placeName": "Eco Jurerê",
+      "placeDescription": "Um ponto de coleta de resíduos recicláveis em Jurerê.",
+      "creator": "aattw",
+      "latitude": "-27.59622988072349",
+      "longitude": "-48.54947346505936",
+      "wasteTypes": ["Plastic", "Organic", "Batteries"],
+      "cep": "88053518",
+      "street": "Rua das Pirapitingas",
+      "number": 371,
+      "addressLine2": "",
+      "neighborhood": "Jurerê",
+      "city": "Florianópolis",
+      "state": "SC"
+    },
+    {
+      "id": "ghi789",
+      "placeName": "Monte Cristo Limpa",
+      "placeDescription": "Um ponto de coleta de resíduos recicláveis no Monte Cristo.",
+      "creator": "kklfs",
+      "latitude": "-27.59622988072349",
+      "longitude": "-48.54947346505936",
+      "wasteTypes": ["Glass", "Metal", "Organic"],
+      "cep": "88090561",
+      "street": "Servidão 1º de Maio",
+      "number": 435,
+      "addressLine2": "",
+      "neighborhood": "Monte Cristo",
+      "city": "Florianópolis",
+      "state": "SC"
+    },
+    {
+      "id": "jkl012",
+      "placeName": "Pântano Recicla",
+      "placeDescription": "Mais tradicional local de coleta de resíduos recicláveis no Pântano do Sul.",
+      "creator": "jdshds",
+      "latitude": "-27.59622988072349",
+      "longitude": "-48.54947346505936",
+      "wasteTypes": ["Paper", "Plastic", "Batteries"],
+      "cep": "88067595",
+      "street": "Servidão Niberto Borges",
+      "number": 938,
+      "addressLine2": "",
+      "neighborhood": "Pântano do Sul",
+      "city": "Florianópolis",
+      "state": "SC"
+    },
+    {
+      "id": "mno345",
+      "placeName": "Armação do Pântano Eco Ponto",
+      "placeDescription": "Outro ponto de coleta de resíduos recicláveis na Armação do Pântano do Sul.",
+      "creator": "hweu",
+      "latitude": "-27.59622988072349",
+      "longitude": "-48.54947346505936",
+      "wasteTypes": ["Metal", "Organic", "Batteries"],
+      "cep": "88066545",
+      "street": "Servidão Martins",
+      "number": 421,
+      "addressLine2": "",
+      "neighborhood": "Armação do Pântano do Sul",
+      "city": "Florianópolis",
+      "state": "SC"
     }
-
-
-
-
-
-
-
-
-,
-
-    
- {
-        "id": "abc123",
-        "placeName": "Recicla Bom Jesus",
-        "placeDescription": "Um  novolocal de coleta de resíduos recicláveis no coração da Cachoeira do Bom Jesus.",
-        "creator": "aattw",
-        "latitude": "-27.59622988072349",
-        "longitude": "-48.54947346505936",
-        "wasteTypes": ["Glass", "Metal", "Paper"],
-        "cep": "88056364",
-        "street": "Rua da Sibipiruna",
-        "number": 389,
-        "addressLine2": "",
-        "neighborhood": "Cachoeira do Bom Jesus",
-        "city": "Florianópolis",
-        "state": "SC"
-    },
-    {
-        "id": "def456",
-        "placeName": "Eco Jurerê",
-        "placeDescription": "Um ponto de coleta de resíduos recicláveis em Jurerê.",
-        "creator": "aattw",
-        "latitude": "-27.59622988072349",
-        "longitude": "-48.54947346505936",
-        "wasteTypes": ["Plastic", "Organic", "Batteries"],
-        "cep": "88053518",
-        "street": "Rua das Pirapitingas",
-        "number": 371,
-        "addressLine2": "",
-        "neighborhood": "Jurerê",
-        "city": "Florianópolis",
-        "state": "SC"
-    },
-    {
-        "id": "ghi789",
-        "placeName": "Monte Cristo Limpa",
-        "placeDescription": "Um ponto de coleta de resíduos recicláveis no Monte Cristo.",
-        "creator": "kklfs",
-        "latitude": "-27.59622988072349",
-        "longitude": "-48.54947346505936",
-        "wasteTypes": ["Glass", "Metal", "Organic"],
-        "cep": "88090561",
-        "street": "Servidão 1º de Maio",
-        "number": 435,
-        "addressLine2": "",
-        "neighborhood": "Monte Cristo",
-        "city": "Florianópolis",
-        "state": "SC"
-    },
-    {
-        "id": "jkl012",
-        "placeName": "Pântano Recicla",
-        "placeDescription": "Mais tradicional local de coleta de resíduos recicláveis no Pântano do Sul.",
-        "creator": "jdshds",
-        "latitude": "-27.59622988072349",
-        "longitude": "-48.54947346505936",
-        "wasteTypes": ["Paper", "Plastic", "Batteries"],
-        "cep": "88067595",
-        "street": "Servidão Niberto Borges",
-        "number": 938,
-        "addressLine2": "",
-        "neighborhood": "Pântano do Sul",
-        "city": "Florianópolis",
-        "state": "SC"
-    },
-    {
-        "id": "mno345",
-        "placeName": "Armação do Pântano Eco Ponto",
-        "placeDescription": "Outro ponto de coleta de resíduos recicláveis na Armação do Pântano do Sul.",
-        "creator": "hweu",
-        "latitude": "-27.59622988072349",
-        "longitude": "-48.54947346505936",
-        "wasteTypes": ["Metal", "Organic", "Batteries"],
-        "cep": "88066545",
-        "street": "Servidão Martins",
-        "number": 421,
-        "addressLine2": "",
-        "neighborhood": "Armação do Pântano do Sul",
-        "city": "Florianópolis",
-        "state": "SC"
-    }
-    
   ]
 }

@@ -11,7 +11,6 @@ export const AppContextProvider = ({ children }) => {
 
   const [users, setUsers] = useState([]);
   const [newUser, setNewUser] = useState(blankUser);
-  const [loginStatus, setLoginStatus] = useState({ status: false, userId: "" });
   const [clickedOnEdit, setClickedOnEdit] = useState({
     isEdit: false,
     editId: "",
@@ -51,18 +50,15 @@ export const AppContextProvider = ({ children }) => {
     }
   }
 
-
   function findNameById(array, id) {
-    let object = array.find(item => item.id === id);
+    let object = array.find((item) => item.id === id);
     return object ? object.name : "--not found--";
   }
   function findCollectPointById(array, id) {
-    let object = array.find(item => item.id === id);
-    console.log("object IS:")
-    console.log(object)
-    return  object
-  }
+    let object = array.find((item) => item.id === id);
 
+    return object;
+  }
 
   function getusers() {
     fetch("http://localhost:3000/users")
@@ -82,14 +78,15 @@ export const AppContextProvider = ({ children }) => {
   }
 
   function registerUser(user) {
-   // const searchResult = nameExists(users, user.name);
-    const searchResult = CPFExists(users,user.cpf)
+    const searchResult = CPFExists(users, user.cpf);
 
     if (user.cpf == "") {
       alert("❌ User field needs a CPF!");
     }
     if (searchResult.result) {
-      alert("✅ CPF was already registered and will be updated with the new typed data!");
+      alert(
+        "✅ CPF was already registered and will be updated with the new typed data!"
+      );
       updateUser(user, searchResult.foundElement.id);
     } else {
       alert("💡 CPF not used yet!");
@@ -259,7 +256,9 @@ export const AppContextProvider = ({ children }) => {
         setNewCollectPoint(blankCollectPoint);
         getCollectPoints();
       })
-      .catch((error) => window.alert("❌ Collect point not updated properly!", error));
+      .catch((error) =>
+        window.alert("❌ Collect point not updated properly!", error)
+      );
   }
 
   function updateCollectPoint(collectPoint, id) {
@@ -313,9 +312,6 @@ export const AppContextProvider = ({ children }) => {
     getusers();
   }, []);
 
-  useEffect(() => {
-    console.log(loginStatus);
-  }, [loginStatus]);
   return (
     <>
       <AppContext.Provider
@@ -355,7 +351,7 @@ export const AppContextProvider = ({ children }) => {
 
           handleClickUser,
           findNameById,
-          findCollectPointById
+          findCollectPointById,
         }}
       >
         {children}

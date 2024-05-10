@@ -1,49 +1,50 @@
-html,#root{
-   height: 100vh;
-   width: 100vw;
+html,
+#root {
+  height: 100vh;
+  width: 100vw;
 }
 
-.main{
-   height: 76vh;
+.main {
+  height: 76vh;
 
-   display: flex;
-   gap: 20px;
-   flex-direction: column;
-   align-items: center;
-   overflow-y: scroll;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
 
-   padding: 20px;
-   padding-top: 10px;
+  padding: 20px;
+  padding-top: 10px;
 }
 
-.renderedList{
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   gap: 30px;
+.renderedList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
 
-   align-items: center;
-   justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
-.renderedList>*{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   border: 1px solid black;
-   border-radius: 5px;
-   gap: 10px;
+.renderedList > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  gap: 10px;
 
-   min-width: 400px;
-   padding: 10px;
+  min-width: 400px;
+  padding: 10px;
 }
 
-.buttonsDiv{
-   display: flex;
-   gap: 10px;
+.buttonsDiv {
+  display: flex;
+  gap: 10px;
 }
 
-.buttonsDiv button{
-   height: 20px;
-   width: 60px;
+.buttonsDiv button {
+  height: 20px;
+  width: 60px;
 }

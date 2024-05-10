@@ -4,28 +4,17 @@ import { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 
 function FormCollectPoint() {
-  
   const {
     users,
     collectPoints,
-    newCollectPoint,
-    blankCollectPoint,
-    nameExists,
-    logInCollectPoint,
-    setNewCollectPoint,
+
     registerCollectPoint,
-    updateCollectPoint,
-    deleteCollectPoint,
+
     getCollectPoints,
-    getuserById,
-    viewRegister,
-    setViewRegister,
-    viewLogIn,
-    setViewLogIn,
 
     clickedOnEdit,
     setClickedOnEdit,
-    findCollectPointById
+    findCollectPointById,
   } = useContext(AppContext);
 
   const {
@@ -53,14 +42,12 @@ function FormCollectPoint() {
     },
   });
 
-
-
-  if(clickedOnEdit.isEdit){
- const loadCollectPoint = findCollectPointById(collectPoints,clickedOnEdit.editId)
- console.log("loadCollectPoint IS:")
- console.log(loadCollectPoint)
-
-    setValue("placeName",loadCollectPoint.placeName)
+  if (clickedOnEdit.isEdit) {
+    const loadCollectPoint = findCollectPointById(
+      collectPoints,
+      clickedOnEdit.editId
+    );
+    setValue("placeName", loadCollectPoint.placeName);
 
     setValue("placeDescription", loadCollectPoint.placeDescription);
     setValue("creator", loadCollectPoint.creator);
@@ -73,19 +60,11 @@ function FormCollectPoint() {
     setValue("street", loadCollectPoint.street);
     setValue("state", loadCollectPoint.state);
     setValue("city", loadCollectPoint.city);
-
-    // setClickedOnEdit({ isEdit: false, editId:""});
-
-
-    // -----------------------------------
-
   }
-
 
   const handleCreateCollectPoint = async (data) => {
     registerCollectPoint(data);
     reset();
-    //console.log(data);
   };
 
   const findCep = () => {
@@ -103,10 +82,6 @@ function FormCollectPoint() {
         .catch((error) => console.log(error));
     }
   };
-  // Assuming you have an array of user names
-  // const registeredUsers = [users[0].name, "User2", "User3", "User4", "User5"];
-
-  // Assuming you have an array of waste types
   const wasteTypes = [
     "Glass",
     "Metal",
@@ -121,10 +96,7 @@ function FormCollectPoint() {
       <div className={styles.h1Wrapper}>
         <h1> Register Collect Point</h1>
       </div>
-      <form
-        onSubmit={handleSubmit(handleCreateCollectPoint)}
-        // style={{ padding: "10px" }}
-      >
+      <form onSubmit={handleSubmit(handleCreateCollectPoint)}>
         <div className={styles.userInteraction}>
           <div className={styles.inputsDiv}>
             <div className={styles.placeInfo}>
@@ -179,14 +151,6 @@ function FormCollectPoint() {
                 placeholder="Latitude"
                 {...register("latitude", {
                   required: "Latitude field is required",
-                  // minLength: {
-                  //   value: 12,
-                  //   message: "Latitude must have at least 12 characters",
-                  // },
-                  // maxLength: {
-                  //   value: 20,
-                  //   message: "Latitude must have a maximum of 20 characters",
-                  // },
                 })}
               />
               <input
@@ -195,14 +159,6 @@ function FormCollectPoint() {
                 placeholder="Longitude"
                 {...register("longitude", {
                   required: "Longitude field is required",
-                  // minLength: {
-                  //   value: 12,
-                  //   message: "Longitude must have at least 12 characters",
-                  // },
-                  // maxLength: {
-                  //   value: 20,
-                  //   message: "Longitude must have a maximum of 20 characters",
-                  // },
                 })}
               />
 
@@ -285,23 +241,22 @@ function FormCollectPoint() {
                 </div>
               ))}
             </div>
-            <div className={styles.buttonsDiv} >
-            <button style={{ height: "50px", width: "100px" }} type="submit">
-              Register Point
-            </button>
+            <div className={styles.buttonsDiv}>
+              <button style={{ height: "50px", width: "100px" }} type="submit">
+                Register Point
+              </button>
 
-            <button  style={{ height: "50px", width: "100px" }}
-          onClick={() => {
-            getCollectPoints();
-            setClickedOnEdit({ isEdit: false, editId:""});
-            reset();
-            
-          }}
-        >
-          Refresh
-        </button>
-        </div>
-            {/* -------------------------------------- */}
+              <button
+                style={{ height: "50px", width: "100px" }}
+                onClick={() => {
+                  getCollectPoints();
+                  setClickedOnEdit({ isEdit: false, editId: "" });
+                  reset();
+                }}
+              >
+                Refresh
+              </button>
+            </div>
           </div>
         </div>
         <div className={styles.errorsDiv}>

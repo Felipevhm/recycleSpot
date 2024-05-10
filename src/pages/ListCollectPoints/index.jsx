@@ -1,19 +1,15 @@
 import styles from "./styles.module.css";
 import { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 function ListCollectPoints() {
   const {
     users,
     collectPoints, //collectPoints
-    newCollectPoint, //newCollectPoint
     blankCollectPoint, //BlankCollectPoint
     setNewCollectPoint, // setNewCollectPoint
-    registerCollectPoint, //registerCollectPoint
 
-    nameExists, // ?
-    updateCollectPoint, // updateCollectPoint
     deleteCollectPoint, // deleteCollectPoint
     getCollectPoints, //getCollectPoints
     getCollectPointById, // getCollectPointById
@@ -79,34 +75,29 @@ function ListCollectPoints() {
                   onClick={() => {
                     getCollectPointById(collectPoint.id);
                     setClickedOnEdit({ isEdit: true, editId: collectPoint.id });
-                    navigate('/register-collect-point');
+                    navigate("/register-collect-point");
                   }}
-                  className={` ${
-        (!clickedOnEdit.isEdit? "" :styles.omitted)
-      }`}
+                  className={` ${!clickedOnEdit.isEdit ? "" : styles.omitted}`}
                 >
                   Edit
                 </button>
 
-
-
-                <div className={`${styles.inputsDiv} ${
-        (clickedOnEdit.isEdit? "" :styles.omitted)
-      }`}>
-  
-      <button style={{height:"40px", width:"60px"}}
-          onClick={() => {
-            getCollectPoints();
-            setClickedOnEdit({ isEdit: false, editId:""});
-            setNewCollectPoint(blankCollectPoint);
-          }}
-        >
-          Refresh
-        </button>
-
-      </div>
-
-
+                <div
+                  className={`${styles.inputsDiv} ${
+                    clickedOnEdit.isEdit ? "" : styles.omitted
+                  }`}
+                >
+                  <button
+                    style={{ height: "40px", width: "60px" }}
+                    onClick={() => {
+                      getCollectPoints();
+                      setClickedOnEdit({ isEdit: false, editId: "" });
+                      setNewCollectPoint(blankCollectPoint);
+                    }}
+                  >
+                    Refresh
+                  </button>
+                </div>
               </div>
             </div>
           ))}
