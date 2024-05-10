@@ -1,78 +1,84 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "Jorge",
-      "email": "a@e.com",
-      "password": "1"
+      "name": "Marcos Vinicius Antonio Tiago Rezende",
+      "cpf": "10582373905",
+      "gender": "M",
+      "email": "marcosrezende98@iesa.com.br",
+      "password": "7rg52fpYoJ",
+      "cep": "88060308",
+      "street": "Servidão Redusino da Silveira",
+      "number": 669,
+      "neighborhood": "São João do Rio Vermelho",
+      "city": "Florianópolis",
+      "state": "SC",
+      "id": "hweu",
+      "birth": "19800529",
+      "addressLine2": ""
     },
     {
-      "name": "clara",
-      "email": "nova@a.com",
-      "password": "2",
-      "id": "3"
+      "name": "Cláudia Nair Antonella da Cunha",
+      "cpf": "63350179975",
+      "gender": "F",
+      "email": "claudia_dacunha@gasparalmeida.com",
+      "password": "OaxMA54LXS",
+      "cep": "88058775",
+      "street": "Servidão Leão Marinho",
+      "number": 644,
+      "neighborhood": "Ingleses do Rio Vermelho",
+      "city": "Florianópolis",
+      "state": "SC",
+      "id": "hjdhfhd",
+      "birth": "19800529",
+      "addressLine2": ""
     },
     {
-      "name": "evaldo",
-      "email": "evaldonew@email.com",
-      "password": "e",
-      "id": "5"
+      "name": "Ester Cecília Porto",
+      "cpf": "55884689969",
+      "gender": "F",
+      "email": "ester.cecilia.porto@greenschool.com.br",
+      "password": "KcCb2oBppT",
+      "cep": "88063281",
+      "street": "Rua Marino Ademar Schweitzer",
+      "number": 712,
+      "neighborhood": "Campeche",
+      "city": "Florianópolis",
+      "state": "SC",
+      "id": "jdshds",
+      "birth": "19800529",
+      "addressLine2": ""
     },
     {
-      "name": "Maria",
+      "name": "Amélia Cristiane Analu Silva",
+      "cpf": "40009167935",
+      "gender": "F",
       "email": "a@a.com",
-      "password": "s",
-      "id": "0b5a"
+      "password": "WUbXE5kx5O",
+      "cep": "88040210",
+      "street": "Rua Heraldo Dias",
+      "number": 110,
+      "neighborhood": "Pantanal",
+      "city": "Florianópolis",
+      "state": "SC",
+      "id": "kklfs",
+      "birth": "19800529",
+      "addressLine2": ""
     },
     {
-      "id": "11bf",
-      "name": "fabrício",
-      "email": "f@a.com",
-      "password": "a"
-    },
-    {
-      "id": "ab37",
-      "name": "Julia",
-      "email": "j@a.com",
-      "password": "j"
-    },
-    {
-      "id": "46c0",
-      "name": "Neide",
-      "email": "n@n.com",
-      "password": "5"
-    },
-    {
-      "name": "Felipe",
-      "email": "e@e.com",
-      "password": "1",
-      "gender": "M",
-      "cpf": "1",
-      "birth": "2024-05-20",
-      "cep": "28010400",
-      "street": "Rua Gilberto Siqueira",
-      "number": "101",
-      "addressLine2": "",
-      "neighborhood": "Centro",
-      "city": "Campos dos Goytacazes",
-      "state": "RJ",
-      "id": "e5d7"
-    },
-    {
-      "name": "Reinaldo",
-      "email": "pa@pa.com",
-      "password": "pa",
-      "gender": "M",
-      "cpf": "44549374593",
-      "birth": "2024-06-04",
-      "cep": "68371057",
-      "street": "Rua Magalhães Barata",
-      "number": "2",
-      "addressLine2": "",
-      "neighborhood": "Centro",
-      "city": "Altamira",
-      "state": "PA",
-      "id": "8865"
+      "name": "Emilly Luzia Silvana Monteiro",
+      "cpf": "83154248900",
+      "gender": "F",
+      "email": "emilly_monteiro@bn.com.br",
+      "password": "3CHipxgAmP",
+      "cep": "88052619",
+      "street": "Servidão das Flores",
+      "number": 686,
+      "neighborhood": "Vargem Grande",
+      "city": "Florianópolis",
+      "state": "SC",
+      "id": "aattw",
+      "birth": "19800529",
+      "addressLine2": ""
     },
     {
       "id": "fc3f",
@@ -81,7 +87,7 @@
       "password": "a",
       "gender": "F",
       "cpf": "44549374593",
-      "birth": "2024-05-29",
+      "birth": "20240529",
       "cep": "75503410",
       "street": "Avenida Brasília",
       "number": "2",
@@ -98,12 +104,7 @@
       "creator": "3",
       "latitude": "1122",
       "longitude": "13131",
-      "wasteTypes": [
-        "on",
-        "on",
-        "on",
-        "on"
-      ],
+      "wasteTypes": ["on", "on", "on", "on"],
       "cep": "49000188",
       "street": "Rua César Macieira",
       "number": "2",
@@ -120,11 +121,7 @@
       "creator": "5",
       "latitude": "2",
       "longitude": "3",
-      "wasteTypes": [
-        "Glass",
-        "Metal",
-        "Organic"
-      ],
+      "wasteTypes": ["Glass", "Metal", "Organic"],
       "cep": "58411370",
       "street": "Avenida Aeroclube",
       "number": "2",
@@ -140,11 +137,7 @@
       "creator": "46c0",
       "latitude": "434",
       "longitude": "43434",
-      "wasteTypes": [
-        "Metal",
-        "Organic",
-        "Batteries"
-      ],
+      "wasteTypes": ["Metal", "Organic", "Batteries"],
       "cep": "28010400",
       "street": "Rua Gilberto Siqueira",
       "number": "543",
@@ -160,9 +153,7 @@
       "creator": "11bf",
       "latitude": "1111111111111111111",
       "longitude": "2222222222222222222",
-      "wasteTypes": [
-        "Paper"
-      ],
+      "wasteTypes": ["Paper"],
       "cep": "69301000",
       "street": "Avenida Ville Roy",
       "number": "22",
@@ -178,9 +169,7 @@
       "creator": "ab37",
       "latitude": "2222222222222222222",
       "longitude": "22222222222222",
-      "wasteTypes": [
-        "Glass"
-      ],
+      "wasteTypes": ["Glass"],
       "cep": "26520331",
       "street": "Estrada Mirandela",
       "number": "341",
@@ -196,11 +185,7 @@
       "creator": "ab37",
       "latitude": "2",
       "longitude": "3",
-      "wasteTypes": [
-        "Paper",
-        "Plastic",
-        "Batteries"
-      ],
+      "wasteTypes": ["Paper", "Plastic", "Batteries"],
       "cep": "24900835",
       "street": "Rua Gabriel Henrique de Farias Júnior",
       "number": "4",
