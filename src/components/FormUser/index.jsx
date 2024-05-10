@@ -31,9 +31,21 @@ function FormUser() {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      name: "",
-      email: "",
-    },
+    name: "",
+    email: "",
+    password: "",
+    gender: "",
+    cpf: "",
+    birth: "",
+    cep: "",
+    street: "",
+    number: "",
+    addressLine2: "",
+    neighborhood: "",
+    city: "",
+    state: "",
+}
+,
   });
 
   const handleCreateUser = async (data) => {
@@ -58,8 +70,10 @@ function FormUser() {
   };
   return (
     <div className={styles.main}>
+    <div className={styles.infoAssets}>
       <img width={150} height={150} src="/logo.png" alt="" />
       <h1> Register User</h1>
+      </div>
       <form action="" onSubmit={handleSubmit(handleCreateUser)}>
         <div className={styles.userInteraction}>
           <div className={styles.inputsDiv}>
