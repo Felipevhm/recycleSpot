@@ -212,7 +212,7 @@ export const AppContextProvider = ({ children }) => {
       alert("💡 Name not used yet!");
 
       if (clickedOnEdit.isEdit) {
-        deleteCollectPoint(clickedOnEdit.editId);
+        silentDeleteCollectPoint(clickedOnEdit.editId);
         setClickedOnEdit({ isEdit: false, editId: "" });
       }
 
@@ -242,6 +242,17 @@ export const AppContextProvider = ({ children }) => {
         getCollectPoints();
       })
       .catch((error) => window.alert("❌ Collect point not deleted!", error));
+  }
+
+  function silentDeleteCollectPoint(id) {
+    fetch("http://localhost:3000/collect-points/" + id, {
+      method: "DELETE",
+    })
+      .then(() => {
+        setNewCollectPoint(blankCollectPoint);
+        getCollectPoints();
+      })
+      .catch((error) => window.alert("❌ Collect point not updated properly!", error));
   }
 
   function updateCollectPoint(collectPoint, id) {
