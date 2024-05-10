@@ -32,7 +32,7 @@ function RegisterUser() {
     <h1 className={(!viewLogIn)&&(!viewRegister)?"":styles.omitted}>Welcome to Recycle Spot!</h1>
       <img className={
         // (!viewLogIn)&&
-      (!viewRegister)?"":styles.omitted} width={200} height={200} src="/logo.png" alt=""  />
+      (!viewRegister)?"":styles.omitted} width={150} height={150} src="/logo.png" alt=""  />
 
        <div className={styles.content}>
       <button
