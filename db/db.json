@@ -76,7 +76,6 @@
     }
   ],
   "collect-points": [
-    
     {
       "placeName": "Everywhere",
       "placeDescription": "sdsd",
@@ -117,26 +116,6 @@
       "neighborhood": "Distrito Industrial",
       "city": "Campina Grande",
       "state": "PB"
-    },
-    {
-      "id": "0bd4",
-      "placeName": "Maricá home",
-      "placeDescription": "aaa",
-      "creator": "ab37",
-      "latitude": "2",
-      "longitude": "3",
-      "wasteTypes": [
-        "Paper",
-        "Plastic",
-        "Batteries"
-      ],
-      "cep": "24900835",
-      "street": "Rua Gabriel Henrique de Farias Júnior",
-      "number": "4",
-      "addressLine2": "",
-      "neighborhood": "Centro",
-      "city": "Maricá",
-      "state": "RJ"
     },
     {
       "id": "2468",
@@ -192,6 +171,26 @@
       "addressLine2": "",
       "neighborhood": "Centro",
       "city": "Nilópolis",
+      "state": "RJ"
+    },
+    {
+      "id": "b0a7",
+      "placeName": "Maricá casa",
+      "placeDescription": "aaa",
+      "creator": "ab37",
+      "latitude": "2",
+      "longitude": "3",
+      "wasteTypes": [
+        "Paper",
+        "Plastic",
+        "Batteries"
+      ],
+      "cep": "24900835",
+      "street": "Rua Gabriel Henrique de Farias Júnior",
+      "number": "4",
+      "addressLine2": "",
+      "neighborhood": "Centro",
+      "city": "Maricá",
       "state": "RJ"
     }
   ]
