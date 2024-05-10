@@ -1,35 +1,37 @@
 # Recycle Spot ♻️
 
-## Descrição
+## Description
 
-Recycle Spot é uma aplicação React para gerenciamento de locais de coleta de reciclagem. A aplicação permite o cadastro de usuários, login, visualização de um dashboard com dados de usuários e locais de coleta, além de permitir a edição, exclusão e atualização de locais de coleta.
+Recycle Spot is a React application for managing recycling collection points. The application allows user registration, login, viewing a dashboard with user data and collection points, as well as allowing editing, deleting, and updating collection points.
 
-## Problema Resolvido
+## Problem Solved
 
-A aplicação foi criada para facilitar o gerenciamento de locais de coleta de reciclagem, permitindo que os usuários registrem e gerenciem esses locais de maneira eficiente.
+The application was created to facilitate the management of recycling collection points, allowing users to register and manage these points efficiently.
 
-## Técnicas e Tecnologias Utilizadas
+## Techniques and Technologies Used
 
-- React: Uma biblioteca JavaScript para construção de interfaces de usuário
-- JSON Server: Usado para simular uma API RESTful
-- Rotas Privadas: Para proteger as rotas e garantir que apenas usuários autenticados possam acessá-las
+- React: A JavaScript library for building user interfaces
+- JSON Server: Used to simulate a RESTful API
+- Private Routes: To protect routes and ensure that only authenticated users can access them
 
-## Como Executar
+## How to Run
 
-1. Clone o repositório
-2. Instale as dependências com `npm install`
-3. Inicie o servidor com `npm start`
-4. Acesse `http://localhost:3000` no seu navegador
+1. Clone the repository
+2. Install dependencies with `npm install`
+3. Start the server with `npm run dev`
+4. Access `http://localhost` in your browser as indicated in the terminal
+5. In addition, the application needs to run the json server with the command `npm run s` or `npx json-server --watch./db/db.json` in a second terminal.
 
-## Melhorias Futuras
+## Future Improvements
 
-- Implementação de testes unitários e de integração
-- Adicionar funcionalidade de recuperação de senha
+- Allow viewing of collection points without the need to log in;
+- Add password recovery functionality;
+- Improve design with more elements of the recycling theme.
 
-## Contribuições
+## Contributions
 
-Contribuições são sempre bem-vindas. Sinta-se à vontade para abrir uma issue ou enviar um pull request.
+Contributions are always welcome. Feel free to open an issue or send a pull request.
 
-## Licença
+## License
 
 MIT
