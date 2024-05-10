@@ -34,7 +34,14 @@ export const AppContextProvider = ({ children }) => {
       return { result: false, foundElement: null };
     }
   }
-
+  function placeNameExists(arrayOfObjects, name) {
+    const foundElement = arrayOfObjects.find((obj) => obj.placeName === name);
+    if (foundElement) {
+      return { result: true, foundElement: foundElement };
+    } else {
+      return { result: false, foundElement: null };
+    }
+  }
   function CPFExists(arrayOfObjects, cpf) {
     const foundElement = arrayOfObjects.find((user) => user.cpf === cpf);
     if (foundElement) {
@@ -198,7 +205,7 @@ export const AppContextProvider = ({ children }) => {
   }
 
   function registerCollectPoint(collectPoint) {
-    const searchResult = nameExists(collectPoints, collectPoint.placeName);
+    const searchResult = placeNameExists(collectPoints, collectPoint.placeName);
 
     if (collectPoint.placeName == "") {
       alert("❌ Collect point field needs a name!");
@@ -212,7 +219,7 @@ export const AppContextProvider = ({ children }) => {
       alert("💡 Name not used yet!");
 
       if (clickedOnEdit.isEdit) {
-        deleteCollectPoint(clickedOnEdit.editId);
+        silentDeleteCollectPoint(clickedOnEdit.editId);
         setClickedOnEdit({ isEdit: false, editId: "" });
       }
 
@@ -244,8 +251,19 @@ export const AppContextProvider = ({ children }) => {
       .catch((error) => window.alert("❌ Collect point not deleted!", error));
   }
 
+  function silentDeleteCollectPoint(id) {
+    fetch("http://localhost:3000/collect-points/" + id, {
+      method: "DELETE",
+    })
+      .then(() => {
+        setNewCollectPoint(blankCollectPoint);
+        getCollectPoints();
+      })
+      .catch((error) => window.alert("❌ Collect point not updated properly!", error));
+  }
+
   function updateCollectPoint(collectPoint, id) {
-    const searchResult = nameExists(collectPoints, collectPoint.name);
+    const searchResult = placeNameExists(collectPoints, collectPoint.name);
 
     if (collectPoint.name == "") {
       alert("❌ Collect point field needs a name!");
