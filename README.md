@@ -1,5 +1,8 @@
 # Recycle Spot ♻️
 
+![image](https://github.com/Felipevhm/recycleSpot/assets/58308361/5161963c-e5c1-446f-b521-9c5716b5a2b7)
+
+
 ## Description
 
 Recycle Spot is a React application for managing recycling collection points. The application allows user registration, login, viewing a dashboard with user data and collection points, as well as allowing editing, deleting, and updating collection points.
