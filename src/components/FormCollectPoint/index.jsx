@@ -123,7 +123,7 @@ function FormCollectPoint() {
       </div>
       <form
         onSubmit={handleSubmit(handleCreateCollectPoint)}
-        style={{ padding: "10px" }}
+        // style={{ padding: "10px" }}
       >
         <div className={styles.userInteraction}>
           <div className={styles.inputsDiv}>
